@@ -130,17 +130,31 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   color: white;
   position: relative;
   border-radius: 12px;
-  margin: 20px 0 0 0; /* vertical spacing from stars */
+  margin: 28px 0 0 0; /* vertical spacing from stars */
   display: inline-block;
-  padding: 0; /* inner handled by headline-inner */
+  padding: 0;
   background: transparent !important;
-  border: 3px solid transparent;
-  border-image-source: linear-gradient(90deg, #ff7a2f 0%, rgba(255,122,47,0.9) 35%, rgba(255,122,47,0.25) 65%, rgba(255,122,47,0) 100%);
-  border-image-slice: 1;
 }
 
-/* Inner content sits over transparent background */
+.el-450636::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 3px; /* border thickness */
+  background: linear-gradient(90deg, #ff7a2f 0%, rgba(255,122,47,0.9) 35%, rgba(255,122,47,0.25) 65%, rgba(255,122,47,0) 100%);
+  -webkit-mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Inner content sits above the masked border */
 .el-450636 .headline-inner {
+  position: relative;
+  z-index: 1;
   padding: 10px 16px;
   border-radius: 9px;
   background: transparent !important;
