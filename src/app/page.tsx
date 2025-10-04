@@ -62,14 +62,14 @@ export default function Home() {
           </div>
 
           {/* Right: Banner image overlapping */}
-          <div className="hero-image hidden sm:block absolute right-8 bottom-0 z-30">
+          <div className="hero-image hidden sm:block absolute right-12 bottom-0 z-30">
             <Image
               src="/anhbanner.webp"
               alt="Banner person"
-              width={520}
-              height={520}
+              width={640}
+              height={640}
               priority
-              className="object-contain"
+              className="object-contain scale-105"
             />
           </div>
         </div>
