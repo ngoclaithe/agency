@@ -33,14 +33,24 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="mt-6">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-6 py-3 text-sm sm:text-base font-medium hover:opacity-90 transition"
+                className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition"
               >
                 Click Here To Get Set Up Today! 👉
               </a>
-              <span className="text-sm opacity-80">4.8/5 star reviews</span>
+
+              <div className="rating mt-3 flex items-center gap-3">
+                <div className="stars flex items-center gap-1">
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                </div>
+                <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
+              </div>
             </div>
           </div>
 
