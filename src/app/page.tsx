@@ -13,8 +13,8 @@ export default function Home() {
     <div className="font-sans min-h-screen bg-background text-foreground">
       {/* Hero Banner */}
       <section className="relative hero-section">
-        <div className="hero-bg absolute inset-0" />
-        <div className="hero-overlay absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url("https://img.funnelish.com/10843/79553/1681836756-main-sec.png?auto=webp&clip=bounds")'}} />
+        <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative container mx-auto px-2 sm:px-4 flex items-center h-[500px] sm:h-[560px] justify-start">
           {/* Left: Text Card */}
