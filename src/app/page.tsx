@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
               </div>
 
-              <div id="450636" className="headline el-450636 light-text h-btn" style={{color: 'white', paddingTop: '10px', textShadow: 'transparent 0px 0px 0px'}}>
+              <div id="450636" className="headline el-450636 light-text h-btn" style={{color: 'white', paddingTop: '10px', textShadow: 'transparent 0px 0px 0px', marginTop: '16px'}}>
                 <div className="headline-inner">
                   <h3><strong>$100M+</strong></h3>
                   <p><span style={{color: 'rgb(230,230,230)', backgroundColor: 'transparent', fontSize: '18px'}}>Ad Spend Via Our Accounts</span></p>
