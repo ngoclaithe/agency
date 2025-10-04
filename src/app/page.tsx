@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import NextImage from "next/image";
+import VideoShowcaseSection from "../components/VideoShowcaseSection";
+
 export default function Home() {
   const partners = [
     "/partner1.webp",
@@ -7,6 +10,33 @@ export default function Home() {
     "/partner3.webp",
     "/partner4.webp",
     "/partner5.webp",
+  ];
+
+  const advertisingHighlights = [
+    {
+      title: "Trusted Facebook Defense",
+      description:
+        "Our system shields your campaigns from unexpected shutdowns, keeping your ads running effortlessly.",
+      icon: "🛡️",
+    },
+    {
+      title: "24-Hour Recovery",
+      description:
+        "Rapid reinstatement capabilities minimize downtime so you can focus on what matters most—growth.",
+      icon: "⏱️",
+    },
+    {
+      title: "Global Access, Local Credibility",
+      description:
+        "Operate with residential US IP addresses for trusted delivery across regions without losing flexibility.",
+      icon: "🌎",
+    },
+    {
+      title: "Scalability",
+      description:
+        "Expand confidently with infrastructure designed to handle aggressive scaling without platform friction.",
+      icon: "📈",
+    },
   ];
 
   return (
@@ -63,7 +93,7 @@ export default function Home() {
 
           {/* Right: Banner image overlapping */}
           <div className="hero-image hidden sm:block absolute right-10 bottom-0 z-30">
-            <Image
+            <NextImage
               src="/anhbanner.webp"
               alt="Banner person"
               width={580}
@@ -88,7 +118,7 @@ export default function Home() {
               <div className="marquee-track">
                 {[...partners, ...partners].map((src, idx) => (
                   <div key={`${src}-${idx}`} className="marquee-item logo-item">
-                    <Image
+                    <NextImage
                       src={src}
                       alt="Partner logo"
                       width={160}
@@ -128,6 +158,47 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Advertising Solutions Section */}
+      <section className="advertising-overview-section py-12 sm:py-16">
+        <div className="container mx-auto px-6 sm:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="advertising-copy max-w-xl">
+              <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Unlock Your Advertising Potential</p>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Seamless Facebook Advertising</h2>
+              <p className="mt-4 text-base text-gray-600 leading-relaxed">
+                Unleash the power of our full-service Facebook advertising set up. From robust protections to
+                strategic scaling, we pave the way for unstoppable growth with tailored packages and resilient
+                infrastructure.
+              </p>
+
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                {advertisingHighlights.map((item) => (
+                  <div key={item.title} className="advertising-highlight-card">
+                    <span className="highlight-icon" aria-hidden="true">{item.icon}</span>
+                    <h3 className="mt-4 text-lg font-semibold text-[#0f172a]">{item.title}</h3>
+                    <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="advertising-visual">
+              <div className="advertising-visual-frame">
+                <NextImage
+                  src="/banner2.webp"
+                  alt="Specialized advertising dashboard"
+                  width={520}
+                  height={380}
+                  className="advertising-visual-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <VideoShowcaseSection />
     </div>
   );
 }
