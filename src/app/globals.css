@@ -24,3 +24,52 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hero & Partners custom styles */
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.logo-img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: none;
+  transition: transform .18s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.03);
+}
+
+@media (prefers-color-scheme: dark) {
+  .marquee-item {
+    background: rgba(0,0,0,0.3);
+    border-color: rgba(255,255,255,0.06);
+  }
+}
