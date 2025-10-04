@@ -19,7 +19,7 @@ export default function Home() {
         <div className="relative container mx-auto px-6 sm:px-10 flex items-center h-[500px] sm:h-[560px] justify-start">
           {/* Left: Text Card */}
           <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
-            <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">
+            <h1 className="text-2xl sm:text-4xl font-semibold leading-tight">
               <span className="block">Banned on Facebook?</span>
               <span className="block">Get Advertising Now!</span>
             </h1>
