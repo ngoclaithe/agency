@@ -130,12 +130,18 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   color: white;
   position: relative;
   border-radius: 12px;
-  padding: 12px 14px 2px 20px;
-  margin: 0 0 0 48px;
-  border: 3px solid transparent;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(90deg, #ff7a2f 0%, rgba(255,122,47,0.6) 35%, rgba(255,122,47,0.12) 65%, rgba(255,122,47,0) 100%);
-  background-origin: padding-box, border-box;
-  background-clip: padding-box, border-box;
+  /* border thickness visually created by outer gradient and inner padding */
+  padding: 3px; /* thickness of border */
+  margin: 16px 0 0 0; /* vertical spacing from stars */
+  display: inline-block;
+  background: linear-gradient(90deg, #ff7a2f 0%, rgba(255,122,47,0.6) 35%, rgba(255,122,47,0.12) 65%, rgba(255,122,47,0) 100%);
+}
+
+/* Inner content to sit above the gradient border and remain transparent */
+.el-450636 .headline-inner {
+  padding: 10px 16px;
+  border-radius: 9px;
+  background: transparent;
 }
 
 .el-450636 .headline-inner h3 {
