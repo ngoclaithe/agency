@@ -102,6 +102,32 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Results / Stats section */}
+      <section className="results-section py-12 sm:py-16">
+        <div className="container mx-auto px-6 sm:px-10 text-center">
+          <p className="text-sm text-[#ff7a2f] font-medium">Results Speak for Themselves</p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">Don't take our <span className="text-[#ff7a2f]">word</span> for it.</h2>
+          <p className="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">Whether you're facing an account ban, disabled ad account or restricted business manager, we can get you back advertising within 24 hours guaranteed.</p>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
+              <div className="text-3xl font-bold text-[#0f172a]">10+</div>
+              <div className="mt-2 text-sm text-gray-500">Years Aged Accounts</div>
+            </div>
+
+            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
+              <div className="text-3xl font-bold text-[#0f172a]">$100M+</div>
+              <div className="mt-2 text-sm text-gray-500">adspend via our accounts</div>
+            </div>
+
+            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
+              <div className="text-3xl font-bold text-[#0f172a]">100%</div>
+              <div className="mt-2 text-sm text-gray-500">US registered IPs</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
