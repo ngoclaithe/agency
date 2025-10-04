@@ -50,7 +50,7 @@ const VideoShowcaseSection = () => {
                   height={720}
                   className="video-poster-image"
                 />
-                <span className="poster-play-badge" aria-hidden>▶</span>
+                <span className="poster-play-badge" aria-hidden="true">▶</span>
               </button>
             )}
           </div>
