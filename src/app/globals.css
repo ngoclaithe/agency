@@ -123,3 +123,17 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
     border-color: rgba(255,255,255,0.06);
   }
 }
+
+.el-450636 {
+  font-size: 32px;
+  text-align: left;
+}
+
+.el-450636 .headline-inner h3 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.el-450636 .headline-inner p {
+  margin: 0;
+}
