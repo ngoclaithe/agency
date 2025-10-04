@@ -26,14 +26,6 @@ body {
 }
 
 /* Hero & Partners custom styles */
-.hero-bg {
-  background-image: url("https://img.funnelish.com/10843/79553/1681836756-main-sec.png?auto=webp&clip=bounds");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
-
 .hero-overlay {
   z-index: 5;
 }
@@ -57,10 +49,6 @@ body {
 
 .paragraph-inner strong {
   font-weight: 700;
-}
-
-.hero-image img, .hero-image :global(img) {
-  display: block;
 }
 
 .marquee {
