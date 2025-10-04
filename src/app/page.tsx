@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
               </div>
 
-              <div id="450636" className="headline el-450636 light-text h-btn" style={{color: 'white', margin: '0 0 0 20px', paddingTop: '10px', textShadow: 'transparent 0px 0px 0px'}}>
+              <div id="450636" className="headline el-450636 light-text h-btn" style={{color: 'white', margin: '0 0 0 28px', paddingTop: '10px', textShadow: 'transparent 0px 0px 0px'}}>
                 <div className="headline-inner">
                   <h3><strong>$100M+</strong></h3>
                   <p><span style={{color: 'rgb(230,230,230)', backgroundColor: 'transparent', fontSize: '18px'}}>Ad Spend Via Our Accounts</span></p>
@@ -62,14 +62,14 @@ export default function Home() {
           </div>
 
           {/* Right: Banner image overlapping */}
-          <div className="hero-image hidden sm:block absolute right-12 bottom-0 z-30">
+          <div className="hero-image hidden sm:block absolute right-10 bottom-0 z-30">
             <Image
               src="/anhbanner.webp"
               alt="Banner person"
-              width={640}
-              height={640}
+              width={580}
+              height={580}
               priority
-              className="object-contain scale-105"
+              className="object-contain scale-100"
             />
           </div>
         </div>

@@ -129,11 +129,12 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   text-align: left;
   color: white;
   background: transparent;
-  border: 2px solid transparent;
-  border-image: linear-gradient(90deg, #ff7a2f 0%, rgba(255,122,47,0.35) 50%, rgba(255,122,47,0) 100%);
+  border: 3px solid transparent;
+  border-radius: 12px;
+  border-image: linear-gradient(90deg, #ff7a2f 0%, rgba(255,122,47,0.45) 40%, rgba(255,122,47,0.05) 70%, rgba(255,122,47,0) 100%);
   border-image-slice: 1;
-  padding: 10px 12px 0 20px;
-  margin: 0 0 0 20px;
+  padding: 12px 14px 2px 20px;
+  margin: 0 0 0 28px;
 }
 
 .el-450636 .headline-inner h3 {
