@@ -104,6 +104,19 @@ body {
   transform: scale(1.03);
 }
 
+.rating .star {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.rating-text {
+  font-weight: 600;
+}
+
+a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
+  opacity: 0.95;
+}
+
 @media (prefers-color-scheme: dark) {
   .marquee-item {
     background: rgba(0,0,0,0.3);
