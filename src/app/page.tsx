@@ -16,7 +16,7 @@ export default function Home() {
         <div className="hero-bg absolute inset-0" />
         <div className="hero-overlay absolute inset-0 bg-black/30" />
 
-        <div className="relative container mx-auto px-6 sm:px-10 flex items-center h-[500px] sm:h-[560px] justify-start">
+        <div className="relative container mx-auto px-4 sm:px-6 flex items-center h-[500px] sm:h-[560px] justify-start">
           {/* Left: Text Card */}
           <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
             <h1 className="text-2xl sm:text-4xl font-semibold leading-tight">
