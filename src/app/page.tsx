@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Image from "next/image";
+
 export default function Home() {
   const partners = [
     "/partner1.webp",
