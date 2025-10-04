@@ -18,15 +18,20 @@ export default function Home() {
 
         <div className="relative container mx-auto px-6 sm:px-10 flex items-center h-[520px] sm:h-[600px]">
           {/* Left: Text Card */}
-          <div className="hero-content z-20 max-w-[680px] bg-white/90 dark:bg-black/60 backdrop-blur rounded-2xl p-6 sm:p-8">
-            <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">Banned on Facebook? Get Advertising Now!</h1>
+          <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8">
+            <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">
+              <span className="block">Banned on Facebook?</span>
+              <span className="block">Get Advertising Now!</span>
+            </h1>
 
-            <ul className="mt-4 space-y-2 text-base sm:text-lg">
-              <li>24/7 Live Chat Support</li>
-              <li>Lifetime Replacement Guaranteed</li>
-              <li>Hassle-Free Service</li>
-              <li>Ready to Advertise from Day One</li>
-            </ul>
+            <div className="paragraph-inner">
+              <ul>
+                <li><strong>24/7 Live Chat Support</strong></li>
+                <li><strong>Lifetime Replacement Guaranteed</strong></li>
+                <li><strong>Hassle-Free Service</strong></li>
+                <li><strong>Ready to Advertise from Day One</strong></li>
+              </ul>
+            </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
