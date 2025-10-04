@@ -141,7 +141,7 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  padding: 3px; /* border thickness */
+  padding: 1px; /* thinner border thickness */
   background: linear-gradient(90deg, #ff7a2f 0%, rgba(255,122,47,0.9) 35%, rgba(255,122,47,0.25) 65%, rgba(255,122,47,0) 100%);
   -webkit-mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
   -webkit-mask-composite: xor;
@@ -167,4 +167,13 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 
 .el-450636 .headline-inner p {
   margin: 0;
+}
+
+/* Accent color for orange text */
+.accent {
+  color: #ff7a2f;
+}
+
+.trusted-text {
+  color: #ff7a2f;
 }
