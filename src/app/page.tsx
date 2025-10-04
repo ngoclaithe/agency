@@ -13,32 +13,42 @@ export default function Home() {
     <div className="font-sans min-h-screen bg-background text-foreground">
       {/* Hero Banner */}
       <section className="relative hero-section">
-        <div className="relative h-[520px] sm:h-[600px] w-full overflow-hidden">
-          <Image
-            src="/anhbanner.webp"
-            alt="Banner"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-6 sm:px-10">
-              <div className="max-w-[680px] bg-white/90 dark:bg-black/60 backdrop-blur rounded-2xl p-6 sm:p-8">
-                <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">Banned on Facebook? Get Advertising Now!</h1>
-                <p className="mt-4 text-base sm:text-lg">24/7 Live Chat Support · Lifetime Replacement Guaranteed · Hassle-Free Service · Ready to Advertise from Day One.</p>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-6 py-3 text-sm sm:text-base font-medium hover:opacity-90 transition"
-                  >
-                    Click Here To Get Set Up Today! 👉
-                  </a>
-                  <span className="text-sm opacity-80">4.8/5 star reviews</span>
-                </div>
-              </div>
+        <div className="hero-bg absolute inset-0" />
+        <div className="hero-overlay absolute inset-0 bg-black/30" />
+
+        <div className="relative container mx-auto px-6 sm:px-10 flex items-center h-[520px] sm:h-[600px]">
+          {/* Left: Text Card */}
+          <div className="hero-content z-20 max-w-[680px] bg-white/90 dark:bg-black/60 backdrop-blur rounded-2xl p-6 sm:p-8">
+            <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">Banned on Facebook? Get Advertising Now!</h1>
+
+            <ul className="mt-4 space-y-2 text-base sm:text-lg">
+              <li>24/7 Live Chat Support</li>
+              <li>Lifetime Replacement Guaranteed</li>
+              <li>Hassle-Free Service</li>
+              <li>Ready to Advertise from Day One</li>
+            </ul>
+
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-6 py-3 text-sm sm:text-base font-medium hover:opacity-90 transition"
+              >
+                Click Here To Get Set Up Today! 👉
+              </a>
+              <span className="text-sm opacity-80">4.8/5 star reviews</span>
             </div>
+          </div>
+
+          {/* Right: Banner image overlapping */}
+          <div className="hero-image hidden sm:block absolute right-8 bottom-0 z-30">
+            <Image
+              src="/anhbanner.webp"
+              alt="Banner person"
+              width={520}
+              height={520}
+              priority
+              className="object-contain"
+            />
           </div>
         </div>
       </section>
