@@ -1,103 +1,133 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const partners = [
+    "/partner1.webp",
+    "/partner2.webp",
+    "/partner3.webp",
+    "/partner4.webp",
+    "/partner5.webp",
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  return (
+    <div className="font-sans min-h-screen bg-background text-foreground">
+      {/* Hero Banner */}
+      <section className="relative hero-section">
+        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url("https://img.funnelish.com/10843/79553/1681836756-main-sec.png?auto=webp&clip=bounds")'}} />
+        <div className="absolute inset-0 bg-black/30" />
+
+        <div className="relative container mx-auto px-2 sm:px-4 flex items-center h-[500px] sm:h-[560px] justify-start">
+          {/* Left: Text Card */}
+          <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
+            <h1 className="text-2xl sm:text-4xl font-semibold leading-tight">
+              <span className="block">Banned on Facebook?</span>
+              <span className="block">Get Advertising Now!</span>
+            </h1>
+
+            <div className="paragraph-inner">
+              <ul>
+                <li><strong>24/7 Live Chat Support</strong></li>
+                <li><strong>Lifetime Replacement Guaranteed</strong></li>
+                <li><strong>Hassle-Free Service</strong></li>
+                <li><strong>Ready to Advertise from Day One</strong></li>
+              </ul>
+            </div>
+
+            <div className="mt-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition"
+              >
+                Click Here To Get Set Up Today! 👉
+              </a>
+
+              <div className="rating mt-3 flex items-center gap-3">
+                <div className="stars flex items-center gap-1">
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                  <span className="star text-yellow-400">★</span>
+                </div>
+                <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
+              </div>
+
+              <div id="450636" className="headline el-450636 light-text h-btn" style={{color: 'white', paddingTop: '10px', textShadow: 'transparent 0px 0px 0px', marginTop: '28px'}}>
+                <div className="headline-inner">
+                  <h3><strong>$100M+</strong></h3>
+                  <p><span style={{color: 'rgb(230,230,230)', backgroundColor: 'transparent', fontSize: '18px'}}>Ad Spend Via Our Accounts</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Banner image overlapping */}
+          <div className="hero-image hidden sm:block absolute right-10 bottom-0 z-30">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/anhbanner.webp"
+              alt="Banner person"
+              width={580}
+              height={580}
+              priority
+              className="object-contain scale-100"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Partners */}
+      <section className="partners-section py-12 sm:py-16">
+        <div className="container mx-auto px-6 sm:px-10">
+          <div className="text-center">
+            <p className="text-sm uppercase tracking-wide opacity-70 trusted-text">Trusted by top affiliates, offer owners and established brands.</p>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Advertisers from the <span className="accent">best</span>.</h2>
+          </div>
+
+          <div className="mt-8 sm:mt-10">
+            <div className="marquee">
+              <div className="marquee-track">
+                {[...partners, ...partners].map((src, idx) => (
+                  <div key={`${src}-${idx}`} className="marquee-item logo-item">
+                    <Image
+                      src={src}
+                      alt="Partner logo"
+                      width={160}
+                      height={64}
+                      className="logo-img"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results / Stats section */}
+      <section className="results-section py-12 sm:py-16">
+        <div className="container mx-auto px-6 sm:px-10 text-center">
+          <p className="text-sm text-[#ff7a2f] font-medium">Results Speak for Themselves</p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">Don't take our <span className="text-[#ff7a2f]">word</span> for it.</h2>
+          <p className="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">Whether you're facing an account ban, disabled ad account or restricted business manager, we can get you back advertising within 24 hours guaranteed.</p>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
+              <div className="text-3xl font-bold text-[#0f172a]">10+</div>
+              <div className="mt-2 text-sm text-gray-500">Years Aged Accounts</div>
+            </div>
+
+            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
+              <div className="text-3xl font-bold text-[#0f172a]">$100M+</div>
+              <div className="mt-2 text-sm text-gray-500">adspend via our accounts</div>
+            </div>
+
+            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
+              <div className="text-3xl font-bold text-[#0f172a]">100%</div>
+              <div className="mt-2 text-sm text-gray-500">US registered IPs</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
