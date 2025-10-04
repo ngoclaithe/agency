@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import Image from "next/image";
+import NextImage from "next/image";
 
 const VIDEO_EMBED_URL = "https://www.youtube.com/embed/20xlrg5lfs8?autoplay=1&rel=0&modestbranding=1";
 
@@ -43,7 +43,7 @@ const VideoShowcaseSection = () => {
                 onClick={() => setIsPlaying(true)}
                 aria-label="Play video"
               >
-                <Image
+                <NextImage
                   src="https://img.funnelish.com/14083/110211/1713003831-imgpsh_fullsize_anim.png"
                   alt="Video preview"
                   width={1280}
