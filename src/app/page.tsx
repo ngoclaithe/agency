@@ -175,7 +175,7 @@ export default function Home() {
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 {advertisingHighlights.map((item) => (
                   <div key={item.title} className="advertising-highlight-card">
-                    <span className="highlight-icon" aria-hidden>{item.icon}</span>
+                    <span className="highlight-icon" aria-hidden="true">{item.icon}</span>
                     <h3 className="mt-4 text-lg font-semibold text-[#0f172a]">{item.title}</h3>
                     <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
                   </div>
