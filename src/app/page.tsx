@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Image from "next/image";
+import NextImage from "next/image";
 import VideoShowcaseSection from "../components/VideoShowcaseSection";
 
 export default function Home() {
@@ -93,7 +93,7 @@ export default function Home() {
 
           {/* Right: Banner image overlapping */}
           <div className="hero-image hidden sm:block absolute right-10 bottom-0 z-30">
-            <Image
+            <NextImage
               src="/anhbanner.webp"
               alt="Banner person"
               width={580}
@@ -118,7 +118,7 @@ export default function Home() {
               <div className="marquee-track">
                 {[...partners, ...partners].map((src, idx) => (
                   <div key={`${src}-${idx}`} className="marquee-item logo-item">
-                    <Image
+                    <NextImage
                       src={src}
                       alt="Partner logo"
                       width={160}
@@ -185,7 +185,7 @@ export default function Home() {
 
             <div className="advertising-visual">
               <div className="advertising-visual-frame">
-                <Image
+                <NextImage
                   src="/banner2.webp"
                   alt="Specialized advertising dashboard"
                   width={520}
