@@ -1,7 +1,6 @@
 "use client";
 
 import NextImage from "next/image";
-import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
@@ -61,101 +60,41 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
-  const [active, setActive] = useState(0);
-  const timerRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    // rotate every 15 seconds
-    timerRef.current = window.setInterval(() => {
-      setActive((prev) => (prev + 1) % testimonials.length);
-    }, 15000);
-
-    return () => {
-      if (timerRef.current) window.clearInterval(timerRef.current);
-    };
-  }, []);
-
   return (
-    <section className="testimonials-section py-16 sm:py-20">
-      <div className="container mx-auto px-6 sm:px-10">
-        <div className="text-center max-w-2xl mx-auto">
-          <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Our Client Testimonials</p>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Some good <span className="text-[#ff7a2f]">words</span> from satisfied clients.</h2>
-        </div>
+    <div className="py-12 sm:py-16">
+      <div className="text-center max-w-2xl mx-auto mb-6">
+        <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Our Client Testimonials</p>
+        <h2 className="mt-2 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Some good <span className="text-[#ff7a2f]">words</span> from satisfied clients.</h2>
+      </div>
 
-        <div className="mt-10 testimonial-carousel">
-          <article className="testimonial-card-single rounded-2xl p-6">
-            <div className="testimonial-image-frame relative animate-in-left">
-              <NextImage src={testimonials[active].img} alt={`${testimonials[active].name}`} fill className="object-cover" />
+      <div className="masonry-testimonials">
+        {testimonials.map((t, i) => (
+          <article key={i} className="testimonial-masonry-card">
+            <div className="testimonial-image-frame relative">
+              <NextImage src={t.img} alt={t.name} fill className="object-cover" />
             </div>
 
-            <div className="testimonial-content mt-4 md:mt-0 animate-in-right">
-              <div className="testimonial-quote-row">
-                <NextImage src="/phay.webp" alt="quote" width={28} height={28} className="shrink-0" />
-                <p className="testimonial-message text-sm leading-relaxed text-gray-700 dark:text-gray-300">{testimonials[active].text}</p>
+            <div className="testimonial-content">
+              <div className="testimonial-quote-row mt-3">
+                <p className="testimonial-message text-sm leading-relaxed text-gray-700">{t.text}</p>
               </div>
 
-              <div className="testimonial-footer mt-4 flex items-center justify-between gap-4">
-                <div className="reviewer-meta">
-                  <div className="reviewer-name">{testimonials[active].name}</div>
-                  <div className="reviewer-role">{testimonials[active].role}</div>
-                  {testimonials[active].verified ? (
-                    <span className="verified-badge"><span aria-hidden="true">✔</span> Verified Review</span>
-                  ) : null}
+              <div className="testimonial-footer mt-4 flex items-center justify-between">
+                <div>
+                  <div className="reviewer-name font-semibold text-[#0f172a]">{t.name}</div>
+                  <div className="reviewer-role text-sm text-gray-500">{t.role}</div>
                 </div>
 
-                <div className="footer-right flex items-center gap-4">
-                  <div className="rating-stars" aria-label={`${testimonials[active].rating} out of 5 stars`}>
-                    {Array.from({ length: testimonials[active].rating }).map((_, i) => (
-                      <span key={i} className="star-icon">★</span>
-                    ))}
-                  </div>
+                <div className="rating-stars" aria-label={`${t.rating} out of 5 stars`}>
+                  {Array.from({ length: t.rating }).map((_, idx) => (
+                    <span key={idx} className="star-icon">★</span>
+                  ))}
                 </div>
               </div>
             </div>
           </article>
-
-          <div className="testimonial-avatar-row mt-6">
-            <button
-              type="button"
-              className="testimonial-nav prev"
-              aria-label="Previous testimonial"
-              onClick={() => setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-            >
-              ‹
-            </button>
-
-            <div className="testimonial-avatar-list">
-              {testimonials.map((t, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  className="testimonial-avatar-button"
-                  aria-current={active === i}
-                >
-                  <NextImage
-                    src={t.img}
-                    alt={`Person ${i + 1}`}
-                    width={56}
-                    height={56}
-                    className={`testimonial-avatar ${active === i ? "active" : ""}`}
-                  />
-                </button>
-              ))}
-            </div>
-
-            <button
-              type="button"
-              className="testimonial-nav next"
-              aria-label="Next testimonial"
-              onClick={() => setActive((prev) => (prev + 1) % testimonials.length)}
-            >
-              ›
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
