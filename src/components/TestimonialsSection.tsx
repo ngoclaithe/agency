@@ -1,5 +1,7 @@
 "use client";
 
+"use client";
+
 import NextImage from "next/image";
 
 const testimonials = [
