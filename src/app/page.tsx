@@ -265,16 +265,17 @@ export default function Home() {
         <AvatarCommentsGrid />
       </section>
 
-      <div className="map-intro text-center py-8 sm:py-10">
-        <p className="text-sm text-[#ff7a2f]">Global reach, Local Touch</p>
-        <h2 className="mt-2 text-2xl sm:text-3xl font-semibold text-[#0f172a]">Worldwide Network, Round The Clock Assistance.</h2>
-        <p className="mt-2 text-sm text-gray-500">From the United States to New Zealand, Our 24/7 Live Customer Support spans the globe.</p>
-      </div>
-
-      {/* Map Section */}
       <section id="map" className="map-section section-muted py-12 sm:py-16">
-        <div className="max-w-[1200px] mx-auto px-2 sm:px-4 text-center">
-          <NextImage src="/map.webp" alt="Global reach map" width={1200} height={360} className="map-img mx-auto" />
+        <div className="zig-row zig-left">
+          <div className="zig-copy">
+            <p className="text-sm text-[#ff7a2f]">Global reach, Local Touch</p>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-semibold text-[#0f172a]">Worldwide Network, Round The Clock Assistance.</h2>
+            <p className="mt-2 text-sm text-gray-500">From the United States to New Zealand, Our 24/7 Live Customer Support spans the globe.</p>
+          </div>
+
+          <div className="zig-media text-center">
+            <NextImage src="/map.webp" alt="Global reach map" width={1200} height={360} className="map-img mx-auto rounded-lg shadow-lg" />
+          </div>
         </div>
       </section>
 
