@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from "react";
-import NextImage from "next/image";
 
 const VIDEO_EMBED_URL = "https://www.youtube.com/embed/20xlrg5lfs8?autoplay=1&rel=0&modestbranding=1";
 
