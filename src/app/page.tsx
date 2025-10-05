@@ -44,10 +44,10 @@ export default function Home() {
     <div className="font-sans min-h-screen bg-background text-foreground">
       {/* Hero Banner */}
       <section className="relative hero-section">
-        <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: 'url("https://img.funnelish.com/10843/79553/1681836756-main-sec.png?auto=webp&clip=bounds")'}} />
+        <div className="absolute inset-0 bg-cover bg-center hero-background" />
         <div className="absolute inset-0 bg-black/30" />
 
-        <div className="relative container mx-auto px-2 sm:px-4 flex items-center h-[500px] sm:h-[560px] justify-start">
+        <div className="relative container mx-auto max-w-[1200px] px-2 sm:px-4 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 h-auto min-h-[520px] lg:h-[560px]">
           {/* Left: Text Card */}
           <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
             <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#ff7a2f] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
@@ -105,14 +105,14 @@ export default function Home() {
           </div>
 
           {/* Right: Banner image overlapping */}
-          <div className="hero-image hidden sm:block absolute right-10 bottom-0 z-30">
+          <div className="hero-image block relative z-30 mt-6 lg:mt-0 lg:absolute lg:right-10 lg:bottom-0">
             <NextImage
               src="/anhbanner.webp"
               alt="Banner person"
               width={580}
               height={580}
               priority
-              className="object-contain scale-100"
+              className="object-contain scale-100 w-[220px] sm:w-[360px] lg:w-[480px] xl:w-[560px] h-auto"
             />
           </div>
         </div>
