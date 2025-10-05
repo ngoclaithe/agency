@@ -4,6 +4,7 @@ import NextImage from "next/image";
 import VideoShowcaseSection from "../components/VideoShowcaseSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import AvatarCommentsGrid from "../components/AvatarCommentsGrid";
+import FAQsSection from "../components/FAQsSection";
 
 export default function Home() {
   const partners = [
@@ -295,16 +296,22 @@ export default function Home() {
 
       <AvatarCommentsGrid />
 
+      <div className="map-intro text-center py-8 sm:py-10">
+        <p className="text-sm text-[#ff7a2f]">Global reach, Local Touch</p>
+        <h2 className="mt-2 text-2xl sm:text-3xl font-semibold text-[#0f172a]">Worldwide Network, Round The Clock Assistance.</h2>
+        <p className="mt-2 text-sm text-gray-500">From the United States to New Zealand, Our 24/7 Live Customer Support spans the globe.</p>
+      </div>
+
       {/* Map Section */}
       <section className="map-section py-12 sm:py-16">
-        <div className="container mx-auto px-6 sm:px-10 text-center">
+        <div className="max-w-[1200px] mx-auto px-2 sm:px-4 text-center">
           <NextImage src="/map.webp" alt="Global reach map" width={1200} height={360} className="map-img mx-auto" />
         </div>
       </section>
 
       {/* Country contact emails */}
       <section className="country-contacts-section py-8 sm:py-12">
-        <div className="container mx-auto px-6 sm:px-10">
+        <div className="max-w-[1200px] mx-auto px-2 sm:px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { img: "/aus.webp", country: "Australia", email: "australia@exiscale.com" },
@@ -317,7 +324,7 @@ export default function Home() {
               { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
               { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
             ].map((c) => (
-              <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg border bg-white">
+              <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg bg-white hover:shadow-md hover:-translate-y-1 transition-transform">
                 <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
                 <div>
                   <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
@@ -328,6 +335,45 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQs */}
+      <FAQsSection />
+
+      {/* Badge / Contact prompt */}
+      <section className="badge-contact-section py-12 sm:py-16 text-center">
+        <div className="max-w-2xl mx-auto">
+          <NextImage src="/badgee.svg" alt="Badge" width={120} height={120} className="mx-auto" />
+          <p className="mt-4 text-sm text-gray-500">Still Got A Question?</p>
+          <h3 className="mt-4 text-3xl font-semibold text-[#0f172a]">Contact us to speak to one of our experts!</h3>
+          <div className="mt-6">
+            <a className="inline-block bg-[#ff7a2f] text-white px-8 py-3 rounded-lg font-semibold">Speak to Live chat. 👉</a>
+          </div>
+
+          <p className="mt-6 text-sm text-gray-400">You can also contact us 24/7 on</p>
+          <div className="mt-4 flex items-center justify-center gap-6">
+            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center">💬</div>
+            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center">✉️</div>
+            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center">✈️</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="site-footer bg-[#07201a] text-white py-6">
+        <div className="max-w-[1200px] mx-auto px-2 sm:px-4 flex items-center justify-between">
+          <div className="footer-left flex items-center gap-4">
+            <NextImage src="/logo.jpg" alt="logo" width={120} height={36} />
+          </div>
+
+          <div className="footer-center text-sm opacity-80">Copyright by 2025 @ Exiscale LLC</div>
+
+          <div className="footer-right text-sm opacity-80 flex items-center gap-6">
+            <a href="#">Terms Of Service</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
