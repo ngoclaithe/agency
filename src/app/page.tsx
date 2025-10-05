@@ -37,8 +37,8 @@ export default function Home() {
               </div>
 
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#0f172a]">10+</div>
-                <div className="text-xs">Years aged accounts</div>
+                <div className="text-2xl font-bold text-white">10+</div>
+                <div className="text-xs text-white/80">Years aged accounts</div>
               </div>
 
               <div className="text-center">
