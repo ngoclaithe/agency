@@ -38,7 +38,6 @@ export default function Home() {
 
           <div className="mt-6 flex items-center gap-6">
             <a href="https://t.me/wolves29" className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition">Click Here To Get Set Up Today! 👉</a>
-            <a href="#pricing" className="inline-flex items-center justify-center rounded-full bg-white/10 text-white px-6 py-3 font-semibold hover:opacity-95 transition">See Plans</a>
           </div>
 
           <div className="rating mt-4 flex items-center gap-3">
@@ -80,9 +79,9 @@ export default function Home() {
       <section id="partners" className="partners-section section-surface py-12 sm:py-16">
         <div className="zig-row zig-left">
           <div className="zig-copy text-left">
-            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Trusted by top affiliates, offer owners and established brands.</p>
-            <h2 className="mt-4 text-3xl font-bold">Advertisers from the <span className="accent">best</span>.</h2>
-            <p className="mt-3 text-sm text-gray-600">We work with high-performing affiliates and established brands across multiple verticals. Our partners trust us to keep campaigns running and scale safely.</p>
+            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Trusted by top affiliates and established brands</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight">Advertisers from the <span className="accent">best</span>.</h2>
+            <p className="mt-4 text-base text-gray-700 max-w-xl">We partner with high-performing affiliates and brands across multiple verticals. Our clients rely on resilient setups and rapid recovery to keep campaigns live and scaling.</p>
           </div>
 
           <div className="zig-media">
