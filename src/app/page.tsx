@@ -289,11 +289,45 @@ export default function Home() {
         </div>
       </section>
 
-      <AvatarCommentsGrid />
-
-      <div className="text-center">
+      <div className="text-center mt-6">
         <a href="#contact" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
       </div>
+
+      <AvatarCommentsGrid />
+
+      {/* Map Section */}
+      <section className="map-section py-12 sm:py-16">
+        <div className="container mx-auto px-6 sm:px-10 text-center">
+          <NextImage src="/map.webp" alt="Global reach map" width={1200} height={360} className="map-img mx-auto" />
+        </div>
+      </section>
+
+      {/* Country contact emails */}
+      <section className="country-contacts-section py-8 sm:py-12">
+        <div className="container mx-auto px-6 sm:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { img: "/aus.webp", country: "Australia", email: "australia@exiscale.com" },
+              { img: "/nz.webp", country: "New Zealand", email: "newzealand@exiscale.com" },
+              { img: "/phil.webp", country: "Philippines", email: "philippines@exiscale.com" },
+              { img: "/singapo.webp", country: "Singapore", email: "singapore@exiscale.com" },
+              { img: "/thailand.webp", country: "Thailand", email: "thailand@exiscale.com" },
+              { img: "/uk.webp", country: "United Kingdom", email: "uk@exiscale.com" },
+              { img: "/usa.webp", country: "United States", email: "usa@exiscale.com" },
+              { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
+              { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
+            ].map((c) => (
+              <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg border bg-white">
+                <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
+                <div>
+                  <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
+                  <div className="country-email text-sm text-[#ff7a2f]">{c.email}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
