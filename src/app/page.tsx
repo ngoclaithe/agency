@@ -3,7 +3,6 @@ import VideoShowcaseSection from "../components/VideoShowcaseSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import AvatarCommentsGrid from "../components/AvatarCommentsGrid";
 import FAQsSection from "../components/FAQsSection";
-import NextImage from "next/image";
 
 export default function Home() {
   const partners = ["/partner1.webp", "/partner2.webp", "/partner3.webp", "/partner4.webp", "/partner5.webp"]; 
