@@ -87,6 +87,17 @@ export default function Home() {
               </div>
 
               <div id="450636" className="headline el-450636 light-text h-btn">
+                <div className="headline-accent" aria-hidden="true">
+                  <svg viewBox="0 0 300 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="headline-accent-svg">
+                    <defs>
+                      <linearGradient id="grad-450636" x1="0" x2="1">
+                        <stop offset="0%" stopColor="#ff7a2f" stopOpacity="1" />
+                        <stop offset="100%" stopColor="#ff7a2f" stopOpacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <rect x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeWidth="6" strokeLinecap="round" />
+                  </svg>
+                </div>
                 <div className="headline-inner">
                   <h3><strong>$100M+</strong></h3>
                   <p><span className="metric-subtext">Ad Spend Via Our Accounts</span></p>
