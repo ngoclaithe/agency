@@ -101,6 +101,9 @@ export default function TestimonialsSection() {
                 <div className="reviewer-meta">
                   <div className="reviewer-name">{testimonials[active].name}</div>
                   <div className="reviewer-role">{testimonials[active].role}</div>
+                  {testimonials[active].verified ? (
+                    <span className="verified-badge"><span aria-hidden="true">✔</span> Verified Review</span>
+                  ) : null}
                 </div>
 
                 <div className="footer-right flex items-center gap-4">
@@ -109,9 +112,6 @@ export default function TestimonialsSection() {
                       <span key={i} className="star-icon">★</span>
                     ))}
                   </div>
-                  {testimonials[active].verified ? (
-                    <span className="verified-badge"><span aria-hidden="true">✔</span> Verified Review</span>
-                  ) : null}
                 </div>
               </div>
             </div>
