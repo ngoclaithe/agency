@@ -634,3 +634,10 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 .animate-in-right { animation: slideInRight 0.45s ease both; }
 @keyframes slideInLeft { from { transform: translateX(-24px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 @keyframes slideInRight { from { transform: translateX(24px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* Force light theme regardless of device color scheme */
+html.force-light { --background: #ffffff; --foreground: #171717; }
+@media (prefers-color-scheme: dark) { html.force-light { --background: #ffffff; --foreground: #171717; } }
+
+/* Ensure partners section is always light */
+.partners-section { background: #ffffff; }
