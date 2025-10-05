@@ -107,11 +107,24 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 }
 
 .hero-background {
-  /* Replaced background image with clean warm gradient */
-  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,250,252,0.96));
+  /* Dark dramatic gradient for hero */
+  background: linear-gradient(180deg, #071124 0%, #0f172a 55%, #12203a 100%);
   background-size: cover;
   background-position: center;
 }
+
+/* Hero specific text styles */
+.hero-section .hero-content { color: #ffffff; }
+.hero-heading-shadow { text-shadow: 0 20px 40px rgba(2,6,23,0.6); }
+.hero-sub { color: rgba(255,255,255,0.88); text-shadow: 0 6px 18px rgba(2,6,23,0.45); }
+
+/* Hero CTA variant */
+.hero-cta { background: #ffffff; color: #2563eb; padding: 0.75rem 1.25rem; border-radius: 999px; font-weight: 800; }
+.hero-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(2,6,23,0.12); }
+
+/* Outline button for hero */
+.btn-outline-hero { border: 1px solid rgba(255,255,255,0.18); color: #ffffff; background: transparent; }
+.btn-outline-hero:hover { background: rgba(255,255,255,0.04); }
 
 .paragraph-inner {
   margin-top: 1rem;
