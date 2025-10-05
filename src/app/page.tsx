@@ -365,7 +365,7 @@ export default function Home() {
             <NextImage src="/logo.png" alt="logo" width={56} height={20} className="footer-logo" />
           </div>
 
-          <div className="footer-center text-sm opacity-80">Copyright by 2025 @ Exiscale LLC</div>
+          <div className="footer-center text-sm opacity-80">Copyright by 2025 @ Woles</div>
 
           <div className="footer-right text-sm opacity-80 flex items-center gap-6">
             <a href="#">Terms Of Service</a>
