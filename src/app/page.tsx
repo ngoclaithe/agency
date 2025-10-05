@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container mx-auto px-6 sm:px-10 py-20">
           <div className="hero-card">
             <div className="hero-left">
-              <h1 className="hero-title font-extrabold leading-tight">Banned on Facebook? <span className="block text-accent">Get Advertising Now!</span></h1>
+              <h1 className="hero-title font-extrabold leading-tight">Got banned on Facebook? <span className="block text-accent">We bring your ads back—securely, fast, and without limits.</span></h1>
 
               <p className="hero-sub mt-4 max-w-xl">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
 
