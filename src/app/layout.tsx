@@ -33,12 +33,12 @@ export default function RootLayout({
               <span className="brand-name">Wolves</span>
             </a>
             <nav className="header-nav hidden sm:flex items-center gap-4">
-              <a href="#results" className="nav-link">Kết quả</a>
-              <a href="#pricing" className="nav-link">Gói</a>
-              <a href="#testimonials" className="nav-link">Đánh giá</a>
+              <a href="#results" className="nav-link">Results</a>
+              <a href="#pricing" className="nav-link">Pricing</a>
+              <a href="#testimonials" className="nav-link">Testimonials</a>
               <a href="#faqs" className="nav-link">FAQs</a>
             </nav>
-            <a href="https://t.me/wolves29" className="header-cta">Liên hệ</a>
+            <a href="https://t.me/wolves29" className="header-cta">Contact</a>
           </div>
         </header>
         <main className="site-main">{children}</main>
