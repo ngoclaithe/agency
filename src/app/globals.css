@@ -6,11 +6,12 @@
 .section-brand-bleed { background: linear-gradient(180deg, rgba(15,23,42,0.06), rgba(15,23,42,0.02)); }
 
 /* Header styles */
-.site-header { background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(15,23,42,0.04); }
-.brand-logo { width: 32px; height: 32px; border-radius: 8px; }
-.brand-name { font-weight: 800; color: #0f172a; }
-.header-nav .nav-link { color: #0f172a; font-weight: 600; }
-.header-cta { background: #ff7a2f; color: white; padding: 0.5rem 0.75rem; border-radius: 999px; font-weight: 700; }
+.site-header { background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(15,23,42,0.06); box-shadow: 0 6px 24px rgba(15,23,42,0.04); }
+.brand-logo { width: 36px; height: 36px; border-radius: 10px; }
+.brand-name { font-weight: 900; color: #0f172a; letter-spacing: 0.6px; font-size: 1.05rem; }
+.header-nav .nav-link { color: #0f172a; font-weight: 700; padding: 0.5rem 0.65rem; border-radius: 8px; transition: background-color 0.12s ease; }
+.header-nav .nav-link:hover { background: rgba(37,99,235,0.06); }
+.header-cta { composes: btn-primary; padding: 0.5rem 0.85rem; border-radius: 999px; }
 
 
 :root {
