@@ -201,6 +201,95 @@ export default function Home() {
 
       <VideoShowcaseSection />
       <TestimonialsSection />
+
+      <section className="pricing-section py-12 sm:py-20">
+        <div className="container mx-auto px-6 sm:px-10 text-center">
+          <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Our Tailored Packages</p>
+          <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Choose the plan that's right for you.</h2>
+          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">If you have any questions, feel free to contact us anytime.</p>
+
+          <div className="mt-8 pricing-grid">
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <div>
+                  <div className="pricing-title">Intermediate Package</div>
+                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                </div>
+                <div className="pricing-price">$199</div>
+              </div>
+
+              <ul className="pricing-features">
+                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">✔</span><span>1 x Business Managers</span></li>
+                <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
+                <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check">✔</span><span>Risk mitigation PDF created by 8 figure marketers</span></li>
+                <li><span className="feature-check">✔</span><span>1 x FREE Trusted FB Pages <small className="text-sm text-gray-500">(Normally Valued at $50)</small></span></li>
+                <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
+              </ul>
+
+              <a href="#" className="pricing-cta">Choose Plan</a>
+            </div>
+
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <div>
+                  <div className="pricing-title">Verified Package</div>
+                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                </div>
+                <div className="pricing-price">$499</div>
+              </div>
+
+              <ul className="pricing-features">
+                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">✔</span><span><strong>1 x Verified Business Manager</strong></span></li>
+                <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
+                <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check">✔</span><span>Stronger Business Manager</span></li>
+                <li><span className="feature-check">✔</span><span>Risk mitigation PDF created by 8 figure marketers</span></li>
+                <li><span className="feature-check">✔</span><span>5 x FREE Trusted FB Pages <small className="text-sm text-gray-500">(Normally Valued at $200)</small></span></li>
+                <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
+              </ul>
+
+              <a href="#" className="pricing-cta">Choose Plan</a>
+            </div>
+
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <div>
+                  <div className="pricing-title">Expert Package</div>
+                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                </div>
+                <div className="pricing-price">$299</div>
+              </div>
+
+              <ul className="pricing-features">
+                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">✔</span><span><strong>2 x Business Managers</strong></span></li>
+                <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
+                <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check">✔</span><span>Risk mitigation PDF created by 8 figure marketers</span></li>
+                <li><span className="feature-check">✔</span><span>3 x FREE Trusted FB Pages <small className="text-sm text-gray-500">(Normally Valued at $100)</small></span></li>
+                <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
+              </ul>
+
+              <a href="#" className="pricing-cta">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="high-spend-banner">
+        <div className="high-spend-inner">
+          <div className="high-spend-title text-lg sm:text-xl font-semibold">Big Campaigns, Need Big Budgets...</div>
+          <div className="high-spend-sub text-sm">Check out our exclusive high-spending accounts today!</div>
+          <button className="high-spend-btn mt-2">Get My High Spending Account Now!</button>
+        </div>
+      </section>
+
+      <div className="text-center">
+        <a href="#contact" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
+      </div>
     </div>
   );
 }
