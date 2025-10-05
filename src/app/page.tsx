@@ -201,6 +201,70 @@ export default function Home() {
 
       <VideoShowcaseSection />
       <TestimonialsSection />
+
+      <section className="pricing-section py-12 sm:py-20">
+        <div className="container mx-auto px-6 sm:px-10 text-center">
+          <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Our Tailored Packages</p>
+          <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Choose the plan that's right for you.</h2>
+          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">If you have any questions, feel free to contact us anytime.</p>
+
+          <div className="mt-8 pricing-grid">
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <div>
+                  <div className="pricing-title">Intermediate Package</div>
+                </div>
+                <div className="pricing-price">$199</div>
+              </div>
+
+              <ul className="pricing-features">
+                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">✔</span><span>1 x Business Manager</span></li>
+                <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
+                <li><span className="feature-check">✔</span><span>Lifetime Replacement at No Additional Cost</span></li>
+              </ul>
+
+              <a href="#" className="pricing-cta">Choose Plan</a>
+            </div>
+
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <div>
+                  <div className="pricing-title">Verified Package</div>
+                </div>
+                <div className="pricing-price">$499</div>
+              </div>
+
+              <ul className="pricing-features">
+                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">✔</span><span>1 x Verified Business Manager</span></li>
+                <li><span className="feature-check">✔</span><span>Stronger Business Manager</span></li>
+                <li><span className="feature-check">✔</span><span>5 x FREE Trusted FB Pages</span></li>
+              </ul>
+
+              <a href="#" className="pricing-cta">Choose Plan</a>
+            </div>
+
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <div>
+                  <div className="pricing-title">Expert Package</div>
+                </div>
+                <div className="pricing-price">$299</div>
+              </div>
+
+              <ul className="pricing-features">
+                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">✔</span><span>2 x Business Managers</span></li>
+                <li><span className="feature-check">✔</span><span>Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check">✔</span><span>3 x FREE Trusted FB Pages</span></li>
+              </ul>
+
+              <a href="#" className="pricing-cta">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
