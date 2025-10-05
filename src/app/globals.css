@@ -447,11 +447,18 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   align-items: flex-start;
 }
 
+.testimonial-avatar-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
 .testimonial-avatar-list {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  margin-top: 1rem;
 }
 
 .testimonial-avatar-button {
@@ -462,6 +469,25 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   border-radius: 999px;
   transition: transform .15s ease;
 }
+
+.testimonial-nav {
+  border: none;
+  background: rgba(15,23,42,0.06);
+  color: #0f172a;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  transition: background-color .12s ease, transform .12s ease;
+}
+.testimonial-nav:hover { transform: translateY(-2px); background: rgba(15,23,42,0.09); }
+.testimonial-nav.prev { margin-right: 4px; }
+.testimonial-nav.next { margin-left: 4px; }
 
 .testimonial-avatar {
   width: 56px;
@@ -529,7 +555,11 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 .pricing-section { background: transparent; }
 .pricing-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1rem; }
 @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
-.pricing-card { background: #ffffff; border-radius: 12px; padding: 1.25rem; border: 1px solid rgba(15,23,42,0.06); box-shadow: 0 18px 30px rgba(15,23,42,0.06); }
+.pricing-card { background: #ffffff; border-radius: 12px; padding: 0.75rem; border: 1px solid rgba(15,23,42,0.06); box-shadow: 0 18px 30px rgba(15,23,42,0.06); }
+
+/* ensure pricing-billed aligns with left of price */
+.pricing-card .pricing-card-header { width: 100%; }
+.pricing-billed { margin-left: 0; padding-left: 0; }
 .pricing-card-header { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
 .pricing-title { font-weight: 700; color: #0f172a; }
 .pricing-price { font-size: 1.5rem; font-weight: 800; color: #0f172a; }
