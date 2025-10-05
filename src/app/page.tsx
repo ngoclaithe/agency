@@ -127,28 +127,26 @@ export default function Home() {
 
       {/* Advertising Solutions Section */}
       <section id="advertising" className="advertising-overview-section section-muted py-12 sm:py-16">
-        <div className="container mx-auto px-6 sm:px-10">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="advertising-copy max-w-xl">
-              <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Unlock Your Advertising Potential</p>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Seamless Facebook Advertising</h2>
-              <p className="mt-4 text-base text-gray-600 leading-relaxed">Unleash the power of our full-service Facebook advertising set up. From robust protections to strategic scaling, we pave the way for unstoppable growth with tailored packages and resilient infrastructure.</p>
+        <div className="zig-row zig-right">
+          <div className="zig-copy">
+            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Unlock Your Advertising Potential</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Seamless Facebook Advertising</h2>
+            <p className="mt-4 text-base text-gray-600 leading-relaxed">Unleash the power of our full-service Facebook advertising set up. From robust protections to strategic scaling, we pave the way for unstoppable growth with tailored packages and resilient infrastructure.</p>
 
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                {advertisingHighlights.map((item) => (
-                  <div key={item.title} className="advertising-highlight-card">
-                    <span className="highlight-icon" aria-hidden="true">{item.icon}</span>
-                    <h3 className="mt-4 text-lg font-semibold text-[#0f172a]">{item.title}</h3>
-                    <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              {advertisingHighlights.map((item) => (
+                <div key={item.title} className="advertising-highlight-card">
+                  <span className="highlight-icon" aria-hidden="true">{item.icon}</span>
+                  <h3 className="mt-4 text-lg font-semibold text-[#0f172a]">{item.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="advertising-visual">
-              <div className="advertising-visual-frame">
-                <NextImage src="/banner2.webp" alt="Specialized advertising dashboard" width={520} height={380} className="advertising-visual-image" />
-              </div>
+          <div className="zig-media">
+            <div className="advertising-visual-frame">
+              <NextImage src="/banner2.webp" alt="Specialized advertising dashboard" width={720} height={480} className="advertising-visual-image" />
             </div>
           </div>
         </div>
