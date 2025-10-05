@@ -10,7 +10,7 @@ export default function Home() {
     { title: "Trusted Facebook Defense", description: "Our system shields your campaigns from unexpected shutdowns, keeping your ads running effortlessly.", icon: "🛡️" },
     { title: "24-Hour Recovery", description: "Rapid reinstatement capabilities minimize downtime so you can focus on what matters most—growth.", icon: "⏱️" },
     { title: "Global Access, Local Credibility", description: "Operate with residential US IP addresses for trusted delivery across regions without losing flexibility.", icon: "🌎" },
-    { title: "Scalability", description: "Expand confidently with infrastructure designed to handle aggressive scaling without platform friction.", icon: "📈" },
+    { title: "Scalability", description: "Expand confidently with infrastructure designed to handle aggressive scaling without platform friction.", icon: "����" },
   ];
 
   return (
@@ -330,20 +330,38 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="site-footer bg-[#07201a] text-white py-6">
-        <div className="max-w-[1200px] mx-auto px-2 sm:px-4 flex items-center justify-between">
-          <div className="footer-left flex items-center gap-4">
-            <NextImage src="/logo.png" alt="logo" width={56} height={20} className="footer-logo" />
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <NextImage src="/logo.png" alt="logo" width={56} height={36} className="footer-logo" />
+            <div>
+              <div className="brand-name font-bold">Wolves</div>
+              <div className="footer-desc">Premium Facebook account recovery and trusted advertising infrastructure.</div>
+            </div>
           </div>
 
-          <div className="footer-center text-sm opacity-80">Copyright by 2025 @Woles</div>
+          <div className="footer-links">
+            <div>
+              <a href="#results">Results</a><br />
+              <a href="#pricing">Pricing</a><br />
+              <a href="#testimonials">Testimonials</a><br />
+              <a href="#faqs">FAQs</a>
+            </div>
 
-          <div className="footer-right text-sm opacity-80 flex items-center gap-6">
-            <a href="#">Terms Of Service</a>
-            <a href="#">Refund Policy</a>
-            <a href="#">Privacy Policy</a>
+            <div>
+              <a href="#">Terms Of Service</a><br />
+              <a href="#">Privacy Policy</a><br />
+              <a href="#">Refund Policy</a>
+            </div>
+          </div>
+
+          <div className="footer-contact">
+            <div className="mb-2">Questions? <strong>hello@wolves.com</strong></div>
+            <a href="https://t.me/wolves29" className="contact-cta">Contact Us</a>
           </div>
         </div>
+
+        <div className="footer-bottom">© 2025 Wolves · All rights reserved</div>
       </footer>
     </div>
   );
