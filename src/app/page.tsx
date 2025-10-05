@@ -213,19 +213,17 @@ export default function Home() {
 
           <div className="mt-8 pricing-grid">
             <div className="pricing-card">
-              <div className="pricing-card-header">
-                <div>
-                  <div className="pricing-title">Intermediate Package</div>
-                </div>
-                <div className="flex flex-col items-end">
+              <div className="pricing-card-header flex flex-col items-start">
+                <div className="pricing-title">Intermediate Package</div>
+                <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$199</div>
-                  <div className="pricing-billed text-xs">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                  <NextImage src="/199.webp" alt="199 package badge" width={56} height={56} className="object-contain" />
                 </div>
-                <img src="/199.webp" alt="199 package badge" className="w-14 h-14 object-contain" />
+                <div className="pricing-billed text-xs mt-2">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
               </div>
 
               <ul className="pricing-features">
-                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">��</span><span>1 x US Profile</span></li>
                 <li><span className="feature-check">✔</span><span>1 x Business Managers</span></li>
                 <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
                 <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
@@ -238,15 +236,13 @@ export default function Home() {
             </div>
 
             <div className="pricing-card">
-              <div className="pricing-card-header">
-                <div>
-                  <div className="pricing-title">Verified Package</div>
-                </div>
-                <div className="flex flex-col items-end">
+              <div className="pricing-card-header flex flex-col items-start">
+                <div className="pricing-title">Verified Package</div>
+                <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$499</div>
-                  <div className="pricing-billed text-xs">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                  <NextImage src="/499.webp" alt="499 package badge" width={56} height={56} className="object-contain" />
                 </div>
-                <img src="/499.webp" alt="499 package badge" className="w-14 h-14 object-contain" />
+                <div className="pricing-billed text-xs mt-2">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
               </div>
 
               <ul className="pricing-features">
@@ -264,15 +260,13 @@ export default function Home() {
             </div>
 
             <div className="pricing-card">
-              <div className="pricing-card-header">
-                <div>
-                  <div className="pricing-title">Expert Package</div>
-                </div>
-                <div className="flex flex-col items-end">
+              <div className="pricing-card-header flex flex-col items-start">
+                <div className="pricing-title">Expert Package</div>
+                <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$299</div>
-                  <div className="pricing-billed text-xs">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                  <NextImage src="/299.webp" alt="299 package badge" width={56} height={56} className="object-contain" />
                 </div>
-                <img src="/299.webp" alt="299 package badge" className="w-14 h-14 object-contain" />
+                <div className="pricing-billed text-xs mt-2">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
               </div>
 
               <ul className="pricing-features">
