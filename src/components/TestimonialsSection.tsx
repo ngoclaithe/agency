@@ -85,11 +85,11 @@ export default function TestimonialsSection() {
 
         <div className="mt-10 testimonial-carousel">
           <article className="testimonial-card-single rounded-2xl p-6">
-            <div key={`img-${active}`} className="testimonial-image-frame relative animate-in-left">
-              <NextImage key={`image-${active}`} src={testimonials[active].img} alt={`${testimonials[active].name}`} fill className="object-cover" />
+            <div className="testimonial-image-frame relative animate-in-left">
+              <NextImage src={testimonials[active].img} alt={`${testimonials[active].name}`} fill className="object-cover" />
             </div>
 
-            <div key={`content-${active}`} className="testimonial-content mt-4 md:mt-0 animate-in-right">
+            <div className="testimonial-content mt-4 md:mt-0 animate-in-right">
               <div className="testimonial-quote-row">
                 <NextImage src="/phay.webp" alt="quote" width={28} height={28} className="shrink-0" />
                 <p className="testimonial-message text-sm leading-relaxed text-gray-700 dark:text-gray-300">{testimonials[active].text}</p>
