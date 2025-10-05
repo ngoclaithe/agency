@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import NextImage from "next/image";
+import Link from "next/link";
 import ScrollProgress from "../components/ScrollProgress";
 import "./globals.css";
 
@@ -37,13 +38,13 @@ export default function RootLayout({
         <header className="site-header sticky top-0 z-50">
           <ScrollProgress />
           <div className="max-w-[1200px] mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
-            <a href="/" className="brand-link flex items-center gap-3">
+            <Link href="/" className="brand-link flex items-center gap-3">
               <span className="brand-logo" aria-hidden="true">
                 <NextImage src="/logo.jpg" alt="Wolves logo" width={36} height={36} className="rounded-mark-img" />
               </span>
 
               <span className={`${playfair.variable} brand-name`} style={{background: 'linear-gradient(90deg,#2563eb,#7cc0ff)', WebkitBackgroundClip: 'text', color: 'transparent'}}>Wolves</span>
-            </a>
+            </Link>
             <nav className="header-nav hidden sm:flex items-center gap-4">
               <a href="#results" className="nav-link">Results</a>
               <a href="#pricing" className="nav-link">Pricing</a>
