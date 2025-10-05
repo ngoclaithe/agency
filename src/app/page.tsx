@@ -84,20 +84,23 @@ export default function Home() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">Don&apos;t take our <span className="text-accent">word</span> for it.</h2>
           <p className="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">Whether you&apos;re facing an account ban, disabled ad account or restricted business manager, we can get you back advertising within 24 hours guaranteed.</p>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="rounded-lg bg-white/80 dark:bg.black/20 p-6 shadow-sm">
-              <div className="text-3xl font-bold text-[#0f172a]">10+</div>
-              <div className="mt-2 text-sm text-gray-500">Years Aged Accounts</div>
+          <div className="mt-8 results-grid">
+            <div className="results-card">
+              <div className="stat-number">10+</div>
+              <div className="stat-label">Years aged accounts</div>
+              <div className="stat-note text-sm text-gray-500">Reliable aged profiles ready to deploy</div>
             </div>
 
-            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
-              <div className="text-3xl font-bold text-[#0f172a]">$100M+</div>
-              <div className="mt-2 text-sm text-gray-500">adspend via our accounts</div>
+            <div className="results-card">
+              <div className="stat-number">$100M+</div>
+              <div className="stat-label">Ad spend processed</div>
+              <div className="stat-note text-sm text-gray-500">Handled across our managed accounts</div>
             </div>
 
-            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
-              <div className="text-3xl font-bold text-[#0f172a]">100%</div>
-              <div className="mt-2 text-sm text-gray-500">US registered IPs</div>
+            <div className="results-card">
+              <div className="stat-number">100%</div>
+              <div className="stat-label">US registered IPs</div>
+              <div className="stat-note text-sm text-gray-500">Domestic IPs to ensure trusted delivery</div>
             </div>
           </div>
         </div>
