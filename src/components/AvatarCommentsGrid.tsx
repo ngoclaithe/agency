@@ -1,5 +1,7 @@
 import NextImage from "next/image";
 
+"use client";
+import NextImage from "next/image";
 import React, { useEffect, useMemo, useState } from "react";
 
 const reviews = [
