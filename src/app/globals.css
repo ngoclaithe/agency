@@ -567,6 +567,13 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 .pricing-price { font-size: 1.5rem; font-weight: 800; color: #0f172a; }
 .pricing-billed { font-size: 0.85rem; color: #475569; margin-top: 0.25rem; }
 .pricing-features { margin-top: 0.75rem; list-style: none; padding: 0; }
+
+/* Force pricing header left alignment despite outer text-center */
+.pricing-card .pricing-card-header { align-items: flex-start !important; text-align: left !important; }
+.pricing-card .pricing-card-header > .pricing-billed { align-self: flex-start; text-align: left; width: 100%; margin-left: 0; padding-left: 0; }
+
+/* Center the Choose Plan button inside card */
+.pricing-cta { display: inline-block; margin: 0 auto; }
 .pricing-features li { display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.35rem 0; border-bottom: 1px dashed rgba(15,23,42,0.04); }
 .pricing-features li:last-child { border-bottom: none; }
 .feature-check { color: #10b981; font-weight: 700; }
