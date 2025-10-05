@@ -3,6 +3,7 @@
 "use client";
 
 import NextImage from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
@@ -38,6 +39,20 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const [active, setActive] = useState(0);
+  const timerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    // rotate every 15 seconds
+    timerRef.current = window.setInterval(() => {
+      setActive((prev) => (prev + 1) % testimonials.length);
+    }, 15000);
+
+    return () => {
+      if (timerRef.current) window.clearInterval(timerRef.current);
+    };
+  }, []);
+
   return (
     <section className="testimonials-section py-16 sm:py-20">
       <div className="container mx-auto px-6 sm:px-10">
@@ -46,18 +61,39 @@ export default function TestimonialsSection() {
           <h2 className="mt-2 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Some good <span className="text-[#ff7a2f]">words</span> from satisfied clients.</h2>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-          {testimonials.map((t, idx) => (
-            <article key={idx} className="testimonial-card rounded-2xl bg-white/90 dark:bg-black/20 border border-black/5 shadow-sm p-6 flex flex-col">
-              <div className="relative w-full h-48 rounded-xl overflow-hidden">
-                <NextImage src={t.img} alt="Client" fill className="object-cover" />
-              </div>
-              <div className="mt-4 flex items-start gap-3">
+        <div className="mt-10 testimonial-carousel">
+          <article className="testimonial-card-single rounded-2xl p-6">
+            <div className="testimonial-image-frame relative">
+              <NextImage src={testimonials[active].img} alt={`Client ${active + 1}`} fill className="object-cover" />
+            </div>
+
+            <div className="testimonial-content mt-4 md:mt-0">
+              <div className="testimonial-quote-row">
                 <NextImage src="/phay.webp" alt="quote" width={28} height={28} className="shrink-0" />
-                <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">{t.text}</p>
+                <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">{testimonials[active].text}</p>
               </div>
-            </article>
-          ))}
+            </div>
+          </article>
+
+          <div className="testimonial-avatar-list mt-6">
+            {testimonials.map((t, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setActive(i)}
+                className="testimonial-avatar-button"
+                aria-current={active === i}
+              >
+                <NextImage
+                  src={t.img}
+                  alt={`Person ${i + 1}`}
+                  width={56}
+                  height={56}
+                  className={`testimonial-avatar ${active === i ? "active" : ""}`}
+                />
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
