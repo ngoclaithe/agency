@@ -553,7 +553,7 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 /* Footer */
 .site-footer { background: #07201a; }
 .site-footer a { color: rgba(255,255,255,0.9); }
-.site-footer .footer-left img, .site-footer .footer-left .footer-logo { width: 84px; height: auto; }
+.site-footer .footer-left img, .site-footer .footer-left .footer-logo { width: 56px; height: auto; }
 
 /* Enter animations for image/text when switching */
 .animate-in-left { animation: slideInLeft 0.45s ease both; }
