@@ -228,7 +228,7 @@ export default function Home() {
                 <div className="pricing-title">Intermediate Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$199</div>
-                  <NextImage src="/199.webp" alt="199 package badge" width={56} height={56} className="object-contain" />
+                  <NextImage src="/199.webp" alt="199 package badge" width={112} height={112} className="object-contain" />
                 </div>
                 <div className="pricing-billed mt-2">
                   <div className="font-semibold">Billed monthly · No Setup Costs</div>
