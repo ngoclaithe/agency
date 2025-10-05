@@ -14,7 +14,7 @@ const VideoShowcaseSection = () => {
           <div className="max-w-3xl mx-auto text-center text-[#0f172a]">
             <p className="text-sm uppercase tracking-wide text-[#ffb067]">Your Success, Amplified Now!</p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-semibold">Scale your business to the next level.</h2>
-            <p className="mt-4 text-base sm:text-lg text-white/80 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed">
               With our tailored packages, you can finally overcome Facebook restrictions and thrive in your industry.
             </p>
 
