@@ -62,10 +62,13 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const id = setInterval(() => {
-      setIndex((s) => (s + 1) % testimonials.length);
+      setVisible(false);
+      setTimeout(() => setIndex((s) => (s + 1) % testimonials.length), 300);
+      setTimeout(() => setVisible(true), 360);
     }, 20000); // rotate every 20s
 
     return () => clearInterval(id);
@@ -81,12 +84,15 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="testimonial-carousel-wrapper max-w-4xl mx-auto">
-        <div className="testimonial-card-large">
+        <div className={`testimonial-card-large ${visible ? 'show' : ''}`} key={index}>
           <div className="testimonial-left">
-            <div className="testimonial-avatar-circle">
-              <NextImage src={t.img} alt={t.name} width={180} height={180} className="testimonial-avatar-img" />
+            <div className="testimonial-avatar-circle-wrap">
+              <div className="testimonial-avatar-circle">
+                <NextImage src={t.img} alt={t.name} width={220} height={220} className="testimonial-avatar-img" />
+              </div>
             </div>
-            <div className="testimonial-meta text-center mt-3">
+
+            <div className="testimonial-meta text-center mt-4">
               <div className="reviewer-name font-semibold text-[#0f172a]">{t.name}</div>
               <div className="reviewer-role text-sm text-gray-500">{t.role}</div>
               <div className="rating-stars mt-2" aria-label={`${t.rating} out of 5 stars`}>
@@ -98,6 +104,7 @@ export default function TestimonialsSection() {
           </div>
 
           <div className="testimonial-right">
+            <div className="quote-mark">“</div>
             <p className="testimonial-message text-base text-gray-700 leading-relaxed">{t.text}</p>
           </div>
         </div>
@@ -108,7 +115,7 @@ export default function TestimonialsSection() {
               key={i}
               aria-label={`Show testimonial ${i + 1}`}
               className={`testimonial-dot ${i === index ? 'active' : ''}`}
-              onClick={() => setIndex(i)}
+              onClick={() => { setVisible(false); setTimeout(() => { setIndex(i); setVisible(true); }, 220); }}
             />
           ))}
         </div>
