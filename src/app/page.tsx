@@ -291,11 +291,14 @@ export default function Home() {
                   { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
                   { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
                 ].map((c) => (
-                  <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg country-card-bg transition-transform hover:shadow-lg">
-                    <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
-                    <div>
-                      <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
-                      <div className="country-email text-sm text-accent">{c.email}</div>
+                  <div key={c.email} className="country-card country-card-bg transition-transform hover:shadow-lg">
+                    <NextImage src={c.img} alt={`${c.country} flag`} width={88} height={88} className="country-flag" />
+
+                    <div className="mt-3 country-name font-semibold text-[#0f172a]">{c.country}</div>
+                    <div className="mt-1 country-email text-sm text-accent">{c.email}</div>
+
+                    <div className="mt-3">
+                      <a href={`mailto:${c.email}`} className="country-cta">Contact</a>
                     </div>
                   </div>
                 ))}
