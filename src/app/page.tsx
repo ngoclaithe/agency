@@ -79,7 +79,7 @@ export default function Home() {
       <section id="partners" className="partners-section section-surface py-12 sm:py-16">
         <div className="zig-row zig-left">
           <div className="zig-copy text-left">
-            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Trusted by top affiliates and established brands</p>
+            <p className="text-sm uppercase tracking-wide text-accent">Trusted by top affiliates and established brands</p>
             <h2 className="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight">Advertisers from the <span className="accent">best</span>.</h2>
             <p className="mt-4 text-base text-gray-700 max-w-xl">We partner with high-performing affiliates and brands across multiple verticals. Our clients rely on resilient setups and rapid recovery to keep campaigns live and scaling.</p>
           </div>
@@ -101,8 +101,8 @@ export default function Home() {
       {/* Results / Stats section */}
       <section id="results" className="results-section section-muted py-12 sm:py-16">
         <div className="container mx-auto px-6 sm:px-10 text-center">
-          <p className="text-sm text-[#ff7a2f] font-medium">Results Speak for Themselves</p>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">Don&apos;t take our <span className="text-[#ff7a2f]">word</span> for it.</h2>
+          <p className="text-sm text-accent font-medium">Results Speak for Themselves</p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">Don&apos;t take our <span className="text-accent">word</span> for it.</h2>
           <p className="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">Whether you&apos;re facing an account ban, disabled ad account or restricted business manager, we can get you back advertising within 24 hours guaranteed.</p>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -128,7 +128,7 @@ export default function Home() {
       <section id="advertising" className="advertising-overview-section section-muted py-12 sm:py-16">
         <div className="zig-row zig-right">
           <div className="zig-copy">
-            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Unlock Your Advertising Potential</p>
+            <p className="text-sm uppercase tracking-wide text-accent">Unlock Your Advertising Potential</p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Seamless Facebook Advertising</h2>
             <p className="mt-4 text-base text-gray-600 leading-relaxed">Unleash the power of our full-service Facebook advertising set up. From robust protections to strategic scaling, we pave the way for unstoppable growth with tailored packages and resilient infrastructure.</p>
 
@@ -161,7 +161,7 @@ export default function Home() {
 
       <section id="pricing" className="pricing-section section-muted py-12 sm:py-20">
         <div className="container mx-auto px-6 sm:px-10 text-center">
-          <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Our Tailored Packages</p>
+          <p className="text-sm uppercase tracking-wide text-accent">Our Tailored Packages</p>
           <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Choose the plan that&apos;s right for you.</h2>
           <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">If you have any questions, feel free to contact us anytime.</p>
 
@@ -268,7 +268,7 @@ export default function Home() {
       <section id="map" className="map-section section-muted py-12 sm:py-16">
         <div className="zig-row zig-left">
           <div className="zig-copy">
-            <p className="text-sm text-[#ff7a2f]">Global reach, Local Touch</p>
+            <p className="text-sm text-accent">Global reach, Local Touch</p>
             <h2 className="mt-2 text-2xl sm:text-3xl font-semibold text-[#0f172a]">Worldwide Network, Round The Clock Assistance.</h2>
             <p className="mt-2 text-sm text-gray-500">From the United States to New Zealand, Our 24/7 Live Customer Support spans the globe.</p>
           </div>
@@ -283,7 +283,7 @@ export default function Home() {
       <section id="contacts" className="country-contacts-section section-surface py-8 sm:py-12">
         <div className="zig-row zig-right">
           <div className="zig-copy">
-            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Local Support Worldwide</p>
+            <p className="text-sm uppercase tracking-wide text-accent">Local Support Worldwide</p>
             <h3 className="mt-3 text-2xl font-semibold text-[#0f172a]">Contact our regional teams</h3>
             <p className="mt-2 text-sm text-gray-600">Available 24/7 across multiple countries — reach out to the team in your region to get tailored advice.</p>
           </div>
@@ -306,7 +306,7 @@ export default function Home() {
                     <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
                     <div>
                       <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
-                      <div className="country-email text-sm text-[#ff7a2f]">{c.email}</div>
+                      <div className="country-email text-sm text-accent">{c.email}</div>
                     </div>
                   </div>
                 ))}
