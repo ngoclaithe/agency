@@ -453,6 +453,7 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   justify-content: center;
   gap: 0.75rem;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .testimonial-avatar-list {
