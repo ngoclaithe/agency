@@ -50,7 +50,7 @@ export default function Home() {
             </div>
 
             <div className="hero-image-frame">
-              <img src="/anhbanner.webp" alt="Banner person" />
+              <img src="/banner.png" alt="Banner person" />
             </div>
           </div>
         </div>
