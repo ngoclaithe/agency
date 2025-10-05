@@ -473,10 +473,10 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 
 .testimonial-nav {
   border: none;
-  background: rgba(15,23,42,0.06);
-  color: #0f172a;
-  width: 36px;
-  height: 36px;
+  background: rgba(255,122,47,0.12);
+  color: #ff7a2f;
+  width: 40px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -485,10 +485,11 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   font-size: 20px;
   line-height: 1;
   transition: background-color .12s ease, transform .12s ease;
+  flex-shrink: 0;
 }
-.testimonial-nav:hover { transform: translateY(-2px); background: rgba(15,23,42,0.09); }
-.testimonial-nav.prev { margin-right: 4px; }
-.testimonial-nav.next { margin-left: 4px; }
+.testimonial-nav:hover { transform: translateY(-2px); background: rgba(255,122,47,0.18); }
+.testimonial-nav.prev { margin-right: 8px; }
+.testimonial-nav.next { margin-left: 8px; }
 
 .testimonial-avatar {
   width: 56px;
