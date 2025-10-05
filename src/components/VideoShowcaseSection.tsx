@@ -43,13 +43,18 @@ const VideoShowcaseSection = () => {
                 onClick={() => setIsPlaying(true)}
                 aria-label="Play video"
               >
-                <NextImage
-                  src="https://img.funnelish.com/14083/110211/1713003831-imgpsh_fullsize_anim.png"
-                  alt="Video preview"
-                  width={1280}
-                  height={720}
-                  className="video-poster-image"
-                />
+                <div className="video-poster-image" style={{background: 'linear-gradient(135deg,#0f172a,#2563eb)', height: 0, paddingTop: '56.25%', position: 'relative'}}>
+                  <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}} aria-hidden="true">
+                    <defs>
+                      <linearGradient id="g1" x1="0" x2="1">
+                        <stop offset="0%" stopColor="#0f172a" />
+                        <stop offset="100%" stopColor="#2563eb" />
+                      </linearGradient>
+                      <filter id="noise"><feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch" /></filter>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#g1)" opacity="0.9" />
+                  </svg>
+                </div>
                 <span className="poster-play-badge" aria-hidden="true">▶</span>
               </button>
             )}
