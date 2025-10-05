@@ -258,15 +258,19 @@ export default function Home() {
               <div className="pricing-card-header">
                 <div>
                   <div className="pricing-title">Expert Package</div>
+                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
                 </div>
                 <div className="pricing-price">$299</div>
               </div>
 
               <ul className="pricing-features">
                 <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
-                <li><span className="feature-check">✔</span><span>2 x Business Managers</span></li>
-                <li><span className="feature-check">✔</span><span>Lifetime Replacement at No Additional Cost</span></li>
-                <li><span className="feature-check">✔</span><span>3 x FREE Trusted FB Pages</span></li>
+                <li><span className="feature-check">✔</span><span><strong>2 x Business Managers</strong></span></li>
+                <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
+                <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check">✔</span><span>Risk mitigation PDF created by 8 figure marketers</span></li>
+                <li><span className="feature-check">✔</span><span>3 x FREE Trusted FB Pages <small className="text-sm text-gray-500">(Normally Valued at $100)</small></span></li>
+                <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
               <a href="#" className="pricing-cta">Choose Plan</a>
