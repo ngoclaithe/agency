@@ -257,8 +257,8 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 }
 
 .video-overlay-layer {
-  background: rgba(13, 31, 53, 0.82);
-  backdrop-filter: blur(4px);
+  background: transparent;
+  backdrop-filter: none;
   padding: 0;
 }
 
