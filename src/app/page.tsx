@@ -32,8 +32,8 @@ export default function Home() {
 
             <div className="mt-10 flex items-center justify-center gap-6 text-sm text-gray-600">
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#0f172a]">$100M+</div>
-                <div className="text-xs">Ad Spend via our accounts</div>
+                <div className="text-2xl font-bold text-white">$100M+</div>
+                <div className="text-xs text-white/80">Ad Spend via our accounts</div>
               </div>
 
               <div className="text-center">
@@ -216,7 +216,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
                 <li><span className="feature-check">✔</span><span><strong>2 x Business Managers</strong></span></li>
                 <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
-                <li><span className="feature-check"><span className="feature-highlight">��</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
                 <li><span className="feature-check">✔</span><span>Risk mitigation PDF created by 8 figure marketers</span></li>
                 <li><span className="feature-check">✔</span><span>3 x FREE Trusted FB Pages <small className="text-sm text-gray-500">(Normally Valued at $100)</small></span></li>
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
