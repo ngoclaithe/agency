@@ -14,8 +14,8 @@
 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7fafc;
+  --foreground: #0f172a;
 }
 
 @theme inline {
@@ -27,8 +27,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Keep background consistent across devices: match light theme values */
-    --background: #f1f5f9;
+    /* Keep background consistent across devices: use the chosen warm palette */
+    --background: #f7fafc;
     --foreground: #0f172a;
   }
 }
@@ -40,7 +40,7 @@ body {
 }
 
 /* Ensure html.force-light enforces the same palette */
-html.force-light { --background: #f1f5f9; --foreground: #0f172a; }
+html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 
 /* Preserve existing variables but expose utility classes for dynamic backgrounds */
 .bg-background { background: var(--background); }
