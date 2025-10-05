@@ -173,7 +173,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Start This Plan</a>
             </div>
 
             <div className="pricing-card text-left featured">
@@ -200,7 +200,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Start This Plan</a>
             </div>
 
             <div className="pricing-card text-left">
@@ -226,7 +226,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Start This Plan</a>
             </div>
           </div>
         </div>
