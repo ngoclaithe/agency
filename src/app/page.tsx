@@ -147,7 +147,7 @@ export default function Home() {
         <div className="container mx-auto px-6 sm:px-10 text-center">
           <p className="text-sm uppercase tracking-wide text-accent">Our Tailored Packages</p>
           <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Choose the plan that&apos;s right for you.</h2>
-          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">If you have any questions, feel free to contact us anytime.</p>
+          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto mb-12">If you have any questions, feel free to contact us anytime.</p>
 
           <div className="mt-8 pricing-grid">
             <div className="pricing-card text-left">
