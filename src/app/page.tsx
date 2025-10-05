@@ -212,7 +212,7 @@ export default function Home() {
           <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">If you have any questions, feel free to contact us anytime.</p>
 
           <div className="mt-8 pricing-grid">
-            <div className="pricing-card">
+            <div className="pricing-card text-left">
               <div className="pricing-card-header flex flex-col items-start">
                 <div className="pricing-title">Intermediate Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
@@ -238,7 +238,7 @@ export default function Home() {
               <a href="#" className="pricing-cta">Choose Plan</a>
             </div>
 
-            <div className="pricing-card">
+            <div className="pricing-card text-left">
               <div className="pricing-card-header flex flex-col items-start">
                 <div className="pricing-title">Verified Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
@@ -265,7 +265,7 @@ export default function Home() {
               <a href="#" className="pricing-cta">Choose Plan</a>
             </div>
 
-            <div className="pricing-card">
+            <div className="pricing-card text-left">
               <div className="pricing-card-header flex flex-col items-start">
                 <div className="pricing-title">Expert Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
