@@ -16,66 +16,63 @@ export default function Home() {
   return (
     <div className="font-sans min-h-screen bg-background text-foreground">
       {/* Hero Banner */}
-      <section id="hero" className="relative hero-section">
+      <section id="hero" className="relative hero-section hero-split">
         <div className="absolute inset-0 bg-cover bg-center hero-background" />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/28" />
 
-        <div className="relative container mx-auto max-w-[1200px] px-2 sm:px-4 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 h-auto min-h-[520px] md:h-[560px]">
-          {/* Left: Text Card */}
-          <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
-            <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#ff7a2f] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
-            <h1 className="text-2xl sm:text-4xl font-semibold leading-tight">
-              <span className="block">Banned on Facebook?</span>
-              <span className="block">Get Advertising Now!</span>
-            </h1>
+        <div className="hero-content z-20 rounded-2xl p-6 sm:p-10 text-white">
+          <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#ff7a2f] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
+          <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
+            <span className="block">Banned on Facebook?</span>
+            <span className="block">Get Advertising Now!</span>
+          </h1>
 
-            <div className="paragraph-inner">
-              <ul>
-                <li><strong>24/7 Live Chat Support</strong></li>
-                <li><strong>Lifetime Replacement Guaranteed</strong></li>
-                <li><strong>Hassle-Free Service</strong></li>
-                <li><strong>Ready to Advertise from Day One</strong></li>
-              </ul>
-            </div>
-
-            <div className="mt-6">
-              <a href="https://t.me/wolves29" className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition">Click Here To Get Set Up Today! 👉</a>
-
-              <div className="rating mt-3 flex items-center gap-3">
-                <div className="stars flex items-center gap-1">
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                </div>
-                <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
-              </div>
-
-              <div id="450636" className="headline el-450636 light-text h-btn">
-                <div className="headline-accent" aria-hidden="true">
-                  <svg viewBox="0 0 300 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="headline-accent-svg">
-                    <defs>
-                      <linearGradient id="grad-450636" x1="0" x2="1">
-                        <stop offset="0%" stopColor="#ff7a2f" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#ff7a2f" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                    <rect className="accent-rect" x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <div className="headline-inner">
-                  <h3><strong>$100M+</strong></h3>
-                  <p><span className="metric-subtext">Ad Spend Via Our Accounts</span></p>
-                </div>
-              </div>
-            </div>
+          <div className="paragraph-inner mt-4">
+            <ul>
+              <li><strong>24/7 Live Chat Support</strong></li>
+              <li><strong>Lifetime Replacement Guaranteed</strong></li>
+              <li><strong>Hassle-Free Service</strong></li>
+              <li><strong>Ready to Advertise from Day One</strong></li>
+            </ul>
           </div>
 
-          {/* Right: Banner image overlapping */}
-          <div className="hero-image block relative z-30 mt-6 md:mt-0 md:absolute md:right-10 md:bottom-0">
-            <NextImage src="/anhbanner.webp" alt="Banner person" width={580} height={580} priority className="object-contain scale-100 w-[220px] sm:w-[360px] lg:w-[480px] xl:w-[560px] h-auto" />
+          <div className="mt-6 flex items-center gap-6">
+            <a href="https://t.me/wolves29" className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition">Click Here To Get Set Up Today! 👉</a>
+            <a href="#pricing" className="inline-flex items-center justify-center rounded-full bg-white/10 text-white px-6 py-3 font-semibold hover:opacity-95 transition">See Plans</a>
           </div>
+
+          <div className="rating mt-4 flex items-center gap-3">
+            <div className="stars flex items-center gap-1">
+              <span className="star text-yellow-400">★</span>
+              <span className="star text-yellow-400">★</span>
+              <span className="star text-yellow-400">★</span>
+              <span className="star text-yellow-400">★</span>
+              <span className="star text-yellow-400">★</span>
+            </div>
+            <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
+          </div>
+
+          <div id="450636" className="headline el-450636 light-text h-btn mt-6">
+            <div className="headline-accent" aria-hidden="true">
+              <svg viewBox="0 0 300 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="headline-accent-svg">
+                <defs>
+                  <linearGradient id="grad-450636" x1="0" x2="1">
+                    <stop offset="0%" stopColor="#ff7a2f" stopOpacity="1" />
+                    <stop offset="100%" stopColor="#ff7a2f" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <rect className="accent-rect" x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeLinecap="round" />
+              </svg>
+            </div>
+            <div className="headline-inner">
+              <h3><strong>$100M+</strong></h3>
+              <p><span className="metric-subtext">Ad Spend Via Our Accounts</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-image zig-media relative z-30 flex items-center justify-center">
+          <NextImage src="/anhbanner.webp" alt="Banner person" width={900} height={900} priority className="object-contain w-full max-w-[640px] rounded-[20px] shadow-2xl" />
         </div>
       </section>
 
