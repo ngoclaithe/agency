@@ -159,17 +159,20 @@ html.force-light { --background: #f1f5f9; --foreground: #0f172a; }
   justify-content: center;
   padding: 0.75rem;
   border-radius: 0.75rem;
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(0,0,0,0.08);
+  background: transparent; /* remove washed white box */
+  border: 1px solid rgba(15,23,42,0.04);
 }
 
+.marquee-track { align-items: center; gap: 1.5rem; }
+
 .logo-img {
-  max-height: 48px;
+  max-height: 52px;
   width: auto;
   object-fit: contain;
   filter: none;
-  transition: transform .18s ease;
+  transition: transform .18s ease, filter .18s ease;
 }
+.logo-img:hover { filter: brightness(1.05) saturate(1.08); transform: scale(1.03); }
 
 .logo-img:hover {
   transform: scale(1.03);
