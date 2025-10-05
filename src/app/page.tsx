@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import NextImage from "next/image";
 import VideoShowcaseSection from "../components/VideoShowcaseSection";
+import TestimonialsSection from "../components/TestimonialsSection";
 
 export default function Home() {
   const partners = [
@@ -199,6 +200,7 @@ export default function Home() {
       </section>
 
       <VideoShowcaseSection />
+      <TestimonialsSection />
     </div>
   );
 }
