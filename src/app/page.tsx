@@ -42,8 +42,8 @@ export default function Home() {
               </div>
 
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#0f172a]">100%</div>
-                <div className="text-xs">US registered IPs</div>
+                <div className="text-2xl font-bold text-white">100%</div>
+                <div className="text-xs text-white/80">US registered IPs</div>
               </div>
             </div>
 
