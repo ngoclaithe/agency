@@ -20,35 +20,37 @@ export default function Home() {
         <div className="absolute inset-0 hero-background" />
 
         <div className="container mx-auto px-6 sm:px-10 py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight hero-heading-shadow">Banned on Facebook? <span className="block text-white">Get Advertising Now!</span></h1>
+          <div className="hero-card">
+            <div className="hero-left">
+              <h1 className="hero-title font-extrabold leading-tight">Banned on Facebook? <span className="block text-accent">Get Advertising Now!</span></h1>
 
-            <p className="mt-6 text-lg hero-sub max-w-2xl mx-auto">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
+              <p className="hero-sub mt-4 max-w-xl">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
 
-            <div className="mt-8 flex justify-center gap-4">
-              <a href="https://t.me/wolves29" className="hero-cta px-10 py-4 text-lg">Click Here To Get Set Up Today! 👉</a>
-              <a href="#pricing" className="btn-outline-hero px-8 py-3">Compare Plans</a>
+              <div className="hero-ctas">
+                <a href="https://t.me/wolves29" className="hero-primary-cta">Click Here To Get Set Up Today! 👉</a>
+                <a href="#pricing" className="hero-secondary-cta">Compare Plans</a>
+              </div>
+
+              <div className="hero-stats">
+                <div className="hero-stat">
+                  <div className="num">10+</div>
+                  <div className="label">Years aged accounts</div>
+                </div>
+
+                <div className="hero-stat">
+                  <div className="num">$100M+</div>
+                  <div className="label">Ad spend via our accounts</div>
+                </div>
+
+                <div className="hero-stat">
+                  <div className="num">100%</div>
+                  <div className="label">US registered IPs</div>
+                </div>
+              </div>
             </div>
 
-            <div className="mt-10 flex items-center justify-center gap-6 text-sm text-gray-600">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">$100M+</div>
-                <div className="text-xs text-white/80">Ad Spend via our accounts</div>
-              </div>
-
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">10+</div>
-                <div className="text-xs text-white/80">Years aged accounts</div>
-              </div>
-
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">100%</div>
-                <div className="text-xs text-white/80">US registered IPs</div>
-              </div>
-            </div>
-
-            <div className="mt-12">
-              <img src="/anhbanner.webp" alt="Banner person" className="mx-auto w-full max-w-[680px] rounded-2xl shadow-2xl object-contain" />
+            <div className="hero-image-frame">
+              <img src="/anhbanner.webp" alt="Banner person" />
             </div>
           </div>
         </div>
