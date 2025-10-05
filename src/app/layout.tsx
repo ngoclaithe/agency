@@ -38,14 +38,10 @@ export default function RootLayout({
           <div className="max-w-[1200px] mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
             <a href="/" className="brand-link flex items-center gap-3">
               <span className="brand-logo" aria-hidden="true">
-                {/* Decorative rounded mark */}
-                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="rounded-mark">
-                  <rect width="36" height="36" rx="8" fill="#2563eb" />
-                  <path d="M10 23L14.5 12L18 18L22.5 10L26 23" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <img src="/logo.jpg" alt="Wolves logo" width={36} height={36} onError={(e)=> (e.currentTarget.src = '/logo.png')} className="rounded-mark-img" />
               </span>
 
-              <span className="brand-name bg-gradient-to-r from-[#2563eb] to-[#7cc0ff] bg-clip-text text-transparent font-extrabold">Wolves</span>
+              <span className={`${playfair.variable} brand-name`} style={{background: 'linear-gradient(90deg,#2563eb,#7cc0ff)', WebkitBackgroundClip: 'text', color: 'transparent'}}>Wolves</span>
             </a>
             <nav className="header-nav hidden sm:flex items-center gap-4">
               <a href="#results" className="nav-link">Results</a>
