@@ -5,139 +5,72 @@ import AvatarCommentsGrid from "../components/AvatarCommentsGrid";
 import FAQsSection from "../components/FAQsSection";
 
 export default function Home() {
-  const partners = [
-    "/partner1.webp",
-    "/partner2.webp",
-    "/partner3.webp",
-    "/partner4.webp",
-    "/partner5.webp",
-  ];
-
+  const partners = ["/partner1.webp", "/partner2.webp", "/partner3.webp", "/partner4.webp", "/partner5.webp"]; 
   const advertisingHighlights = [
-    {
-      title: "Trusted Facebook Defense",
-      description:
-        "Our system shields your campaigns from unexpected shutdowns, keeping your ads running effortlessly.",
-      icon: "🛡️",
-    },
-    {
-      title: "24-Hour Recovery",
-      description:
-        "Rapid reinstatement capabilities minimize downtime so you can focus on what matters most—growth.",
-      icon: "⏱️",
-    },
-    {
-      title: "Global Access, Local Credibility",
-      description:
-        "Operate with residential US IP addresses for trusted delivery across regions without losing flexibility.",
-      icon: "🌎",
-    },
-    {
-      title: "Scalability",
-      description:
-        "Expand confidently with infrastructure designed to handle aggressive scaling without platform friction.",
-      icon: "📈",
-    },
+    { title: "Trusted Facebook Defense", description: "Our system shields your campaigns from unexpected shutdowns, keeping your ads running effortlessly.", icon: "🛡️" },
+    { title: "24-Hour Recovery", description: "Rapid reinstatement capabilities minimize downtime so you can focus on what matters most—growth.", icon: "⏱️" },
+    { title: "Global Access, Local Credibility", description: "Operate with residential US IP addresses for trusted delivery across regions without losing flexibility.", icon: "🌎" },
+    { title: "Scalability", description: "Expand confidently with infrastructure designed to handle aggressive scaling without platform friction.", icon: "📈" },
   ];
 
   return (
     <div className="font-sans min-h-screen bg-background text-foreground">
       {/* Hero Banner */}
-      <section className="relative hero-section">
-        <div className="absolute inset-0 bg-cover bg-center hero-background" />
-        <div className="absolute inset-0 bg-black/30" />
+      <section id="hero" className="relative hero-section">
+        <div className="absolute inset-0 hero-background" />
 
-        <div className="relative container mx-auto max-w-[1200px] px-2 sm:px-4 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 h-auto min-h-[520px] md:h-[560px]">
-          {/* Left: Text Card */}
-          <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
-            <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#ff7a2f] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
-            <h1 className="text-2xl sm:text-4xl font-semibold leading-tight">
-              <span className="block">Banned on Facebook?</span>
-              <span className="block">Get Advertising Now!</span>
-            </h1>
+        <div className="container mx-auto px-6 sm:px-10 py-20">
+          <div className="hero-card">
+            <div className="hero-left">
+              <h1 className="hero-title font-extrabold leading-tight">Got banned on Facebook? <span className="block text-accent">We bring your ads back—securely, fast, and without limits.</span></h1>
 
-            <div className="paragraph-inner">
-              <ul>
-                <li><strong>24/7 Live Chat Support</strong></li>
-                <li><strong>Lifetime Replacement Guaranteed</strong></li>
-                <li><strong>Hassle-Free Service</strong></li>
-                <li><strong>Ready to Advertise from Day One</strong></li>
-              </ul>
-            </div>
+              <p className="hero-sub mt-4 max-w-xl">Reliable US IPs, aged accounts, and 24/7 expert support.</p>
 
-            <div className="mt-6">
-              <a
-                href="https://t.me/wolves29"
-                className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition"
-              >
-                Click Here To Get Set Up Today! 👉
-              </a>
-
-              <div className="rating mt-3 flex items-center gap-3">
-                <div className="stars flex items-center gap-1">
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                  <span className="star text-yellow-400">★</span>
-                </div>
-                <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
+              <div className="hero-ctas">
+                <a href="https://t.me/wolves29" className="hero-primary-cta">Get Started — Instant Setup</a>
+                <a href="#pricing" className="hero-secondary-cta">Compare Plans</a>
               </div>
 
-              <div id="450636" className="headline el-450636 light-text h-btn">
-                <div className="headline-accent" aria-hidden="true">
-                  <svg viewBox="0 0 300 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="headline-accent-svg">
-                    <defs>
-                      <linearGradient id="grad-450636" x1="0" x2="1">
-                        <stop offset="0%" stopColor="#ff7a2f" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#ff7a2f" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                    <rect className="accent-rect" x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeLinecap="round" />
-                  </svg>
+              <div className="hero-stats">
+                <div className="hero-stat">
+                  <div className="num">10+</div>
+                  <div className="label">Years aged accounts</div>
                 </div>
-                <div className="headline-inner">
-                  <h3><strong>$100M+</strong></h3>
-                  <p><span className="metric-subtext">Ad Spend Via Our Accounts</span></p>
+
+                <div className="hero-stat">
+                  <div className="num">$100M+</div>
+                  <div className="label">Ad spend via our accounts</div>
+                </div>
+
+                <div className="hero-stat">
+                  <div className="num">100%</div>
+                  <div className="label">US registered IPs</div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right: Banner image overlapping */}
-          <div className="hero-image block relative z-30 mt-6 md:mt-0 md:absolute md:right-10 md:bottom-0">
-            <NextImage
-              src="/anhbanner.webp"
-              alt="Banner person"
-              width={580}
-              height={580}
-              priority
-              className="object-contain scale-100 w-[220px] sm:w-[360px] lg:w-[480px] xl:w-[560px] h-auto"
-            />
+            <div className="hero-image-frame">
+              <img src="/banner.png" alt="Banner person" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Partners */}
-      <section className="partners-section py-12 sm:py-16">
-        <div className="container mx-auto px-6 sm:px-10">
-          <div className="text-center">
-            <p className="text-sm uppercase tracking-wide opacity-70 trusted-text">Trusted by top affiliates, offer owners and established brands.</p>
-            <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Advertisers from the <span className="accent">best</span>.</h2>
+      <section id="partners" className="partners-section section-surface py-12 sm:py-16">
+        <div className="zig-row zig-left">
+          <div className="zig-copy text-left">
+            <p className="text-sm uppercase tracking-wide text-accent">Trusted by top affiliates and established brands</p>
+            <h2 className="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight">Advertisers from the <span className="accent">best</span>.</h2>
+            <p className="mt-4 text-base text-gray-700 max-w-xl">We partner with high-performing affiliates and brands across multiple verticals. Our clients rely on resilient setups and rapid recovery to keep campaigns live and scaling.</p>
           </div>
 
-          <div className="mt-8 sm:mt-10">
+          <div className="zig-media">
             <div className="marquee">
               <div className="marquee-track">
                 {[...partners, ...partners].map((src, idx) => (
                   <div key={`${src}-${idx}`} className="marquee-item logo-item">
-                    <NextImage
-                      src={src}
-                      alt="Partner logo"
-                      width={160}
-                      height={64}
-                      className="logo-img"
-                    />
+                    <NextImage src={src} alt="Partner logo" width={160} height={64} className="logo-img" />
                   </div>
                 ))}
               </div>
@@ -147,78 +80,74 @@ export default function Home() {
       </section>
 
       {/* Results / Stats section */}
-      <section className="results-section py-12 sm:py-16">
+      <section id="results" className="results-section section-muted py-12 sm:py-16">
         <div className="container mx-auto px-6 sm:px-10 text-center">
-          <p className="text-sm text-[#ff7a2f] font-medium">Results Speak for Themselves</p>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">Don&apos;t take our <span className="text-[#ff7a2f]">word</span> for it.</h2>
+          <p className="text-sm text-accent font-medium">Results Speak for Themselves</p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">Don&apos;t take our <span className="text-accent">word</span> for it.</h2>
           <p className="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">Whether you&apos;re facing an account ban, disabled ad account or restricted business manager, we can get you back advertising within 24 hours guaranteed.</p>
 
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
-              <div className="text-3xl font-bold text-[#0f172a]">10+</div>
-              <div className="mt-2 text-sm text-gray-500">Years Aged Accounts</div>
+          <div className="mt-8 results-grid">
+            <div className="results-card">
+              <div className="stat-number">10+</div>
+              <div className="stat-label">Years aged accounts</div>
+              <div className="stat-note text-sm text-gray-500">Reliable aged profiles ready to deploy</div>
             </div>
 
-            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
-              <div className="text-3xl font-bold text-[#0f172a]">$100M+</div>
-              <div className="mt-2 text-sm text-gray-500">adspend via our accounts</div>
+            <div className="results-card">
+              <div className="stat-number">$100M+</div>
+              <div className="stat-label">Ad spend processed</div>
+              <div className="stat-note text-sm text-gray-500">Handled across our managed accounts</div>
             </div>
 
-            <div className="rounded-lg bg-white/80 dark:bg-black/20 p-6 shadow-sm">
-              <div className="text-3xl font-bold text-[#0f172a]">100%</div>
-              <div className="mt-2 text-sm text-gray-500">US registered IPs</div>
+            <div className="results-card">
+              <div className="stat-number">100%</div>
+              <div className="stat-label">US registered IPs</div>
+              <div className="stat-note text-sm text-gray-500">Domestic IPs to ensure trusted delivery</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Advertising Solutions Section */}
-      <section className="advertising-overview-section py-12 sm:py-16">
-        <div className="container mx-auto px-6 sm:px-10">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="advertising-copy max-w-xl">
-              <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Unlock Your Advertising Potential</p>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Seamless Facebook Advertising</h2>
-              <p className="mt-4 text-base text-gray-600 leading-relaxed">
-                Unleash the power of our full-service Facebook advertising set up. From robust protections to
-                strategic scaling, we pave the way for unstoppable growth with tailored packages and resilient
-                infrastructure.
-              </p>
+      <section id="advertising" className="advertising-overview-section section-muted py-12 sm:py-16">
+        <div className="zig-row zig-right">
+          <div className="zig-copy">
+            <p className="text-sm uppercase tracking-wide text-accent">Unlock Your Advertising Potential</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Seamless Facebook Advertising</h2>
+            <p className="mt-4 text-base text-gray-600 leading-relaxed">Unleash the power of our full-service Facebook advertising set up. From robust protections to strategic scaling, we pave the way for unstoppable growth with tailored packages and resilient infrastructure.</p>
 
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                {advertisingHighlights.map((item) => (
-                  <div key={item.title} className="advertising-highlight-card">
-                    <span className="highlight-icon" aria-hidden="true">{item.icon}</span>
-                    <h3 className="mt-4 text-lg font-semibold text-[#0f172a]">{item.title}</h3>
-                    <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              {advertisingHighlights.map((item) => (
+                <div key={item.title} className="advertising-highlight-card">
+                  <span className="highlight-icon" aria-hidden="true">{item.icon}</span>
+                  <h3 className="mt-4 text-lg font-semibold text-[#0f172a]">{item.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="advertising-visual">
-              <div className="advertising-visual-frame">
-                <NextImage
-                  src="/banner2.webp"
-                  alt="Specialized advertising dashboard"
-                  width={520}
-                  height={380}
-                  className="advertising-visual-image"
-                />
-              </div>
+          <div className="zig-media">
+            <div className="advertising-visual-frame">
+              <NextImage src="/banner2.webp" alt="Specialized advertising dashboard" width={720} height={480} className="advertising-visual-image" />
             </div>
           </div>
         </div>
       </section>
 
-      <VideoShowcaseSection />
-      <TestimonialsSection />
+      <section id="video" className="section-brand-bleed">
+        <VideoShowcaseSection />
+      </section>
 
-      <section className="pricing-section py-12 sm:py-20">
+      <section id="testimonials" className="section-surface">
+        <TestimonialsSection />
+      </section>
+
+      <section id="pricing" className="pricing-section section-muted py-12 sm:py-20">
         <div className="container mx-auto px-6 sm:px-10 text-center">
-          <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Our Tailored Packages</p>
+          <p className="text-sm uppercase tracking-wide text-accent">Our Tailored Packages</p>
           <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Choose the plan that&apos;s right for you.</h2>
-          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto">If you have any questions, feel free to contact us anytime.</p>
+          <p className="mt-3 text-sm text-gray-500 max-w-2xl mx-auto mb-12">If you have any questions, feel free to contact us anytime.</p>
 
           <div className="mt-8 pricing-grid">
             <div className="pricing-card text-left">
@@ -244,12 +173,12 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Start This Plan</a>
             </div>
 
-            <div className="pricing-card text-left">
+            <div className="pricing-card text-left featured">
               <div className="pricing-card-header flex flex-col items-start">
-                <div className="pricing-title">Verified Package</div>
+                <div className="pricing-title mt-3">Verified Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$499</div>
                   <NextImage src="/499.webp" alt="499 package badge" width={112} height={112} className="object-contain" />
@@ -271,7 +200,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Start This Plan</a>
             </div>
 
             <div className="pricing-card text-left">
@@ -297,103 +226,145 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Start This Plan</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="high-spend-banner">
+      <section className="high-spend-banner section-surface">
         <div className="high-spend-inner">
-          <div className="high-spend-title text-lg sm:text-xl font-semibold">Big Campaigns, Need Big Budgets...</div>
-          <div className="high-spend-sub text-sm">Check out our exclusive high-spending accounts today!</div>
-          <button className="high-spend-btn mt-2">Get My High Spending Account Now!</button>
+          <div>
+            <div className="high-spend-title text-lg sm:text-xl">Big Campaigns, Need Big Budgets...</div>
+            <div className="high-spend-sub text-sm mt-1">Check out our exclusive high-spending accounts today!</div>
+          </div>
+
+          <div>
+            <button className="high-spend-cta">Explore High-Spend Accounts</button>
+          </div>
         </div>
       </section>
 
       <div className="text-center mt-6">
-        <a href="https://t.me/wolves29" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
+        <a href="https://t.me/wolves29" className="main-cta-prominent">Get Started — Instant Setup</a>
       </div>
 
-      <AvatarCommentsGrid />
+      <section id="reviews" className="section-surface">
+        <AvatarCommentsGrid />
+      </section>
 
-      <div className="map-intro text-center py-8 sm:py-10">
-        <p className="text-sm text-[#ff7a2f]">Global reach, Local Touch</p>
-        <h2 className="mt-2 text-2xl sm:text-3xl font-semibold text-[#0f172a]">Worldwide Network, Round The Clock Assistance.</h2>
-        <p className="mt-2 text-sm text-gray-500">From the United States to New Zealand, Our 24/7 Live Customer Support spans the globe.</p>
-      </div>
+      <section id="map" className="map-section section-muted py-12 sm:py-16">
+        <div className="zig-row zig-left">
+          <div className="zig-copy">
+            <p className="text-sm text-accent">Global reach, Local Touch</p>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-semibold text-[#0f172a]">Worldwide Network, Round The Clock Assistance.</h2>
+            <p className="mt-2 text-sm text-gray-500">From the United States to New Zealand, Our 24/7 Live Customer Support spans the globe.</p>
+          </div>
 
-      {/* Map Section */}
-      <section className="map-section py-12 sm:py-16">
-        <div className="max-w-[1200px] mx-auto px-2 sm:px-4 text-center">
-          <NextImage src="/map.webp" alt="Global reach map" width={1200} height={360} className="map-img mx-auto" />
+          <div className="zig-media text-center">
+            <NextImage src="/map.webp" alt="Global reach map" width={1200} height={360} className="map-img mx-auto rounded-lg shadow-lg" />
+          </div>
         </div>
       </section>
 
       {/* Country contact emails */}
-      <section className="country-contacts-section py-8 sm:py-12">
-        <div className="max-w-[1200px] mx-auto px-2 sm:px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { img: "/aus.webp", country: "Australia", email: "australia@exiscale.com" },
-              { img: "/nz.webp", country: "New Zealand", email: "newzealand@exiscale.com" },
-              { img: "/phil.webp", country: "Philippines", email: "philippines@exiscale.com" },
-              { img: "/singapo.webp", country: "Singapore", email: "singapore@exiscale.com" },
-              { img: "/thailand.webp", country: "Thailand", email: "thailand@exiscale.com" },
-              { img: "/uk.webp", country: "United Kingdom", email: "uk@exiscale.com" },
-              { img: "/usa.webp", country: "United States", email: "usa@exiscale.com" },
-              { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
-              { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
-            ].map((c) => (
-              <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg bg-white hover:shadow-md hover:-translate-y-1 transition-transform">
-                <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
-                <div>
-                  <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
-                  <div className="country-email text-sm text-[#ff7a2f]">{c.email}</div>
-                </div>
-              </div>
-            ))}
+      <section id="contacts" className="country-contacts-section section-surface py-8 sm:py-12">
+        <div className="country-contacts-inner">
+        <div className="zig-row zig-right">
+          <div className="zig-copy">
+            <p className="text-sm uppercase tracking-wide text-accent">Local Support Worldwide</p>
+            <h3 className="mt-3 text-2xl font-semibold text-[#0f172a]">Contact our regional teams</h3>
+            <p className="mt-2 text-sm text-gray-600">Available 24/7 across multiple countries — reach out to the team in your region to get tailored advice.</p>
           </div>
+
+          <div className="zig-media">
+            <div className="max-w-[1200px] mx-auto px-2 sm:px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { img: "/aus.webp", country: "Australia", email: "australia@exiscale.com" },
+                  { img: "/nz.webp", country: "New Zealand", email: "newzealand@exiscale.com" },
+                  { img: "/phil.webp", country: "Philippines", email: "philippines@exiscale.com" },
+                  { img: "/singapo.webp", country: "Singapore", email: "singapore@exiscale.com" },
+                  { img: "/thailand.webp", country: "Thailand", email: "thailand@exiscale.com" },
+                  { img: "/uk.webp", country: "United Kingdom", email: "uk@exiscale.com" },
+                  { img: "/usa.webp", country: "United States", email: "usa@exiscale.com" },
+                  { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
+                  { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
+                ].map((c) => (
+                  <div key={c.email} className="country-card country-card-bg transition-transform hover:shadow-lg">
+                    <NextImage src={c.img} alt={`${c.country} flag`} width={88} height={88} className="country-flag" />
+
+                    <div className="mt-3 country-name font-semibold text-[#0f172a]">{c.country}</div>
+                    <div className="mt-1 country-email text-sm text-accent">{c.email}</div>
+
+                    <div className="mt-3">
+                      <a href={`mailto:${c.email}`} className="country-cta">Contact</a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </section>
 
       {/* FAQs */}
-      <FAQsSection />
+      <section id="faqs" className="section-muted">
+        <FAQsSection />
+      </section>
 
       {/* Badge / Contact prompt */}
-      <section className="badge-contact-section py-12 sm:py-16 text-center">
-        <div className="max-w-2xl mx-auto">
-          <NextImage src="/badgee.svg" alt="Badge" width={120} height={120} className="mx-auto" />
-          <p className="mt-4 text-sm text-gray-500">Still Got A Question?</p>
-          <h3 className="mt-4 text-3xl font-semibold text-[#0f172a]">Contact us to speak to one of our experts!</h3>
-          <div className="mt-6">
-            <a className="inline-block bg-[#ff7a2f] text-white px-8 py-3 rounded-lg font-semibold">Speak to Live chat. 👉</a>
+      <section id="contact" className="badge-contact-section">
+        <div className="badge-contact-inner">
+          <div className="badge-contact-visual">
+            <NextImage src="/badgee.svg" alt="Badge" width={96} height={96} />
           </div>
 
-          <p className="mt-6 text-sm text-gray-400">You can also contact us 24/7 on</p>
-          <div className="mt-4 flex items-center justify-center gap-6">
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/mess.svg" alt="Messenger" width={24} height={24} /></div>
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/mess2.svg" alt="Messenger Alt" width={24} height={24} /></div>
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/tele.svg" alt="Telegram" width={24} height={24} /></div>
+          <div className="badge-contact-copy">
+            <div className="badge-contact-title">Still Got A Question?</div>
+            <div className="badge-contact-sub">Contact us to speak to one of our experts — available 24/7 for setup and support.</div>
+          </div>
+
+          <div>
+            <a href="https://t.me/wolves29" className="badge-contact-cta">Start Live Chat</a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="site-footer bg-[#07201a] text-white py-6">
-        <div className="max-w-[1200px] mx-auto px-2 sm:px-4 flex items-center justify-between">
-          <div className="footer-left flex items-center gap-4">
-            <NextImage src="/logo.png" alt="logo" width={56} height={20} className="footer-logo" />
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <NextImage src="/logo.png" alt="logo" width={56} height={36} className="footer-logo" />
+            <div>
+              <div className="brand-name font-bold">Wolves</div>
+              <div className="footer-desc">Premium Facebook account recovery and trusted advertising infrastructure.</div>
+            </div>
           </div>
 
-          <div className="footer-center text-sm opacity-80">Copyright by 2025 @Woles</div>
+          <div className="footer-links">
+            <div>
+              <a href="#results">Results</a><br />
+              <a href="#pricing">Pricing</a><br />
+              <a href="#testimonials">Testimonials</a><br />
+              <a href="#faqs">FAQs</a>
+            </div>
 
-          <div className="footer-right text-sm opacity-80 flex items-center gap-6">
-            <a href="#">Terms Of Service</a>
-            <a href="#">Refund Policy</a>
-            <a href="#">Privacy Policy</a>
+            <div>
+              <a href="#">Terms Of Service</a><br />
+              <a href="#">Privacy Policy</a><br />
+              <a href="#">Refund Policy</a>
+            </div>
+          </div>
+
+          <div className="footer-contact">
+            <div className="mb-2">Questions? <strong>hello@wolves.com</strong></div>
+            <a href="https://t.me/wolves29" className="contact-cta">Contact Us</a>
           </div>
         </div>
+
+        <div className="footer-bottom">© 2025 Wolves · All rights reserved</div>
       </footer>
     </div>
   );

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import NextImage from "next/image";
+import ScrollProgress from "../components/ScrollProgress";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -9,6 +11,12 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  weight: ["700","800"],
   subsets: ["latin"],
 });
 
@@ -24,10 +32,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="force-light">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <script dangerouslySetInnerHTML={{__html: `(function(){try{var _native=window.__nativeFetch||window.fetch;if(!_native) return; if(!window.__nativeFetch){window.__nativeFetch=_native; window.fetch=function(){try{return window.__nativeFetch.apply(this,arguments);}catch(e){console.warn('fetch guard caught',e);return Promise.reject(e);}}}}catch(e){console.warn('fetch guard init failed',e);}})();`}} />
+        <header className="site-header sticky top-0 z-50">
+          <ScrollProgress />
+          <div className="max-w-[1200px] mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
+            <a href="/" className="brand-link flex items-center gap-3">
+              <span className="brand-logo" aria-hidden="true">
+                <NextImage src="/logo.jpg" alt="Wolves logo" width={36} height={36} className="rounded-mark-img" />
+              </span>
+
+              <span className={`${playfair.variable} brand-name`} style={{background: 'linear-gradient(90deg,#2563eb,#7cc0ff)', WebkitBackgroundClip: 'text', color: 'transparent'}}>Wolves</span>
+            </a>
+            <nav className="header-nav hidden sm:flex items-center gap-4">
+              <a href="#results" className="nav-link">Results</a>
+              <a href="#pricing" className="nav-link">Pricing</a>
+              <a href="#testimonials" className="nav-link">Testimonials</a>
+              <a href="#faqs" className="nav-link">FAQs</a>
+            </nav>
+            <div className="flex items-center gap-3">
+              <a href="https://t.me/wolves29" className="header-cta">Contact</a>
+              <a href="#hero" className="header-ghost-cta">Get Started</a>
+            </div>
+          </div>
+        </header>
+        <main className="site-main">{children}</main>
       </body>
     </html>
   );
