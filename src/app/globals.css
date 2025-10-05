@@ -41,10 +41,23 @@ body {
 .paragraph-inner ul {
   padding-left: 1.25rem;
   margin: 0;
+  list-style: none;
 }
 
 .paragraph-inner li {
   margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+/* green check mark before each list item */
+.paragraph-inner li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.08rem;
+  color: #16a34a; /* green */
+  font-weight: 700;
 }
 
 .paragraph-inner strong {
