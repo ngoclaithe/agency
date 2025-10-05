@@ -44,6 +44,37 @@ body {
 
 
 /* Hero & Partners custom styles */
+
+/* SPLIT HERO */
+.hero-section { position: relative; }
+.hero-split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 2rem; }
+@media (max-width: 768px) { .hero-split { grid-template-columns: 1fr; } .hero-image { order: 2; } .hero-content { order: 1; } }
+
+/* ZIG ZAG ROW */
+.zig-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.zig-row.zig-right .zig-media { order: 2; }
+.zig-row.zig-left .zig-media { order: 1; }
+@media (max-width: 768px) { .zig-row { grid-template-columns: 1fr; } .zig-row .zig-media, .zig-row .zig-copy { order: unset; } }
+
+/* PRICING - featured card */
+.pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 768px) { .pricing-grid { grid-template-columns: 1fr 1fr 1fr; max-width: 1100px; margin: 0 auto; } }
+.pricing-card { transition: transform .18s ease, box-shadow .18s ease; }
+.pricing-card.featured { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(15,23,42,0.18); border: 2px solid rgba(255,122,47,0.14); }
+.pricing-card .pricing-price { font-size: 2rem; }
+
+/* MASONRY TESTIMONIALS */
+.masonry-testimonials { column-count: 3; column-gap: 1rem; max-width: 1200px; margin: 0 auto; padding: 1rem; }
+@media (max-width: 1024px) { .masonry-testimonials { column-count: 2; } }
+@media (max-width: 640px) { .masonry-testimonials { column-count: 1; } }
+.testimonial-masonry-card { display: inline-block; width: 100%; margin: 0 0 1rem; background: #fff; border-radius: 12px; padding: 1rem; box-shadow: 0 18px 40px rgba(15,23,42,0.06); border: 1px solid rgba(15,23,42,0.04); }
+.testimonial-masonry-card .testimonial-image-frame { height: 160px; border-radius: 10px; overflow: hidden; }
+.testimonial-masonry-card .testimonial-content { padding-top: 0.75rem; }
+
+/* Scroll progress */
+.progress-wrap { height: 4px; background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02)); position: relative; }
+.progress-indicator { height: 4px; background: linear-gradient(90deg, #ff7a2f, #ffb067); width: 0%; transition: width 120ms linear; }
+
 .hero-overlay {
   z-index: 5;
 }
