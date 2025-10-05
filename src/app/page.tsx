@@ -269,6 +269,7 @@ export default function Home() {
 
       {/* Country contact emails */}
       <section id="contacts" className="country-contacts-section section-surface py-8 sm:py-12">
+        <div className="country-contacts-inner">
         <div className="zig-row zig-right">
           <div className="zig-copy">
             <p className="text-sm uppercase tracking-wide text-accent">Local Support Worldwide</p>
@@ -290,7 +291,7 @@ export default function Home() {
                   { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
                   { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
                 ].map((c) => (
-                  <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg bg-white hover:shadow-md hover:-translate-y-1 transition-transform">
+                  <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg country-card-bg transition-transform hover:shadow-lg">
                     <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
                     <div>
                       <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
@@ -301,6 +302,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
