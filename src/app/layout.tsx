@@ -33,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="force-light">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <script dangerouslySetInnerHTML={{__html: `(function(){try{var _native=window.__nativeFetch||window.fetch;if(!_native) return; if(!window.__nativeFetch){window.__nativeFetch=_native; window.fetch=function(){try{return window.__nativeFetch.apply(this,arguments);}catch(e){console.warn('fetch guard caught',e);return Promise.reject(e);}}}}catch(e){console.warn('fetch guard init failed',e);}})();`}} />
         <header className="site-header sticky top-0 z-50">
           <ScrollProgress />
           <div className="max-w-[1200px] mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
