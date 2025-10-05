@@ -230,7 +230,7 @@ export default function Home() {
                   <div className="pricing-price">$199</div>
                   <NextImage src="/199.webp" alt="199 package badge" width={112} height={112} className="object-contain" />
                 </div>
-                <div className="pricing-billed mt-2">
+                <div className="pricing-billed mt-2 text-left">
                   <div className="font-semibold">Billed monthly · No Setup Costs</div>
                   <div className="text-xs mt-1">and 0% of Ad Spend</div>
                 </div>
@@ -246,7 +246,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
             </div>
 
             <div className="pricing-card text-left">
@@ -256,7 +256,7 @@ export default function Home() {
                   <div className="pricing-price">$499</div>
                   <NextImage src="/499.webp" alt="499 package badge" width={112} height={112} className="object-contain" />
                 </div>
-                <div className="pricing-billed mt-2">
+                <div className="pricing-billed mt-2 text-left">
                   <div className="font-semibold">Billed monthly · No Setup Costs</div>
                   <div className="text-xs mt-1">and 0% of Ad Spend</div>
                 </div>
@@ -273,7 +273,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
             </div>
 
             <div className="pricing-card text-left">
@@ -283,7 +283,7 @@ export default function Home() {
                   <div className="pricing-price">$299</div>
                   <NextImage src="/299.webp" alt="299 package badge" width={112} height={112} className="object-contain" />
                 </div>
-                <div className="pricing-billed mt-2">
+                <div className="pricing-billed mt-2 text-left">
                   <div className="font-semibold">Billed monthly · No Setup Costs</div>
                   <div className="text-xs mt-1">and 0% of Ad Spend</div>
                 </div>
@@ -299,7 +299,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
-              <a href="#" className="pricing-cta">Choose Plan</a>
+              <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
             </div>
           </div>
         </div>
