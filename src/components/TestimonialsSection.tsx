@@ -117,24 +117,44 @@ export default function TestimonialsSection() {
             </div>
           </article>
 
-          <div className="testimonial-avatar-list mt-6">
-            {testimonials.map((t, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setActive(i)}
-                className="testimonial-avatar-button"
-                aria-current={active === i}
-              >
-                <NextImage
-                  src={t.img}
-                  alt={`Person ${i + 1}`}
-                  width={56}
-                  height={56}
-                  className={`testimonial-avatar ${active === i ? "active" : ""}`}
-                />
-              </button>
-            ))}
+          <div className="testimonial-avatar-row mt-6">
+            <button
+              type="button"
+              className="testimonial-nav prev"
+              aria-label="Previous testimonial"
+              onClick={() => setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+            >
+              ‹
+            </button>
+
+            <div className="testimonial-avatar-list">
+              {testimonials.map((t, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setActive(i)}
+                  className="testimonial-avatar-button"
+                  aria-current={active === i}
+                >
+                  <NextImage
+                    src={t.img}
+                    alt={`Person ${i + 1}`}
+                    width={56}
+                    height={56}
+                    className={`testimonial-avatar ${active === i ? "active" : ""}`}
+                  />
+                </button>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              className="testimonial-nav next"
+              aria-label="Next testimonial"
+              onClick={() => setActive((prev) => (prev + 1) % testimonials.length)}
+            >
+              ›
+            </button>
           </div>
         </div>
       </div>
