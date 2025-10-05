@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import NextImage from "next/image";
 
 const testimonials = [
@@ -60,6 +61,21 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => setIndex((s) => (s + 1) % testimonials.length), 300);
+      setTimeout(() => setVisible(true), 360);
+    }, 20000); // rotate every 20s
+
+    return () => clearInterval(id);
+  }, []);
+
+  const t = testimonials[index];
+
   return (
     <div className="py-12 sm:py-16">
       <div className="text-center max-w-2xl mx-auto mb-6">
@@ -67,33 +83,42 @@ export default function TestimonialsSection() {
         <h2 className="mt-2 text-3xl sm:text-4xl font-semibold text-[#0f172a]">Some good <span className="text-[#ff7a2f]">words</span> from satisfied clients.</h2>
       </div>
 
-      <div className="masonry-testimonials">
-        {testimonials.map((t, i) => (
-          <article key={i} className="testimonial-masonry-card">
-            <div className="testimonial-image-frame relative">
-              <NextImage src={t.img} alt={t.name} fill className="object-cover" />
-            </div>
-
-            <div className="testimonial-content">
-              <div className="testimonial-quote-row mt-3">
-                <p className="testimonial-message text-sm leading-relaxed text-gray-700">{t.text}</p>
-              </div>
-
-              <div className="testimonial-footer mt-4 flex items-center justify-between">
-                <div>
-                  <div className="reviewer-name font-semibold text-[#0f172a]">{t.name}</div>
-                  <div className="reviewer-role text-sm text-gray-500">{t.role}</div>
-                </div>
-
-                <div className="rating-stars" aria-label={`${t.rating} out of 5 stars`}>
-                  {Array.from({ length: t.rating }).map((_, idx) => (
-                    <span key={idx} className="star-icon">★</span>
-                  ))}
-                </div>
+      <div className="testimonial-carousel-wrapper max-w-4xl mx-auto">
+        <div className={`testimonial-card-large ${visible ? 'show' : ''}`} key={index}>
+          <div className="testimonial-left">
+            <div className="testimonial-avatar-circle-wrap">
+              <div className="testimonial-avatar-circle">
+                <NextImage src={t.img} alt={t.name} width={220} height={220} className="testimonial-avatar-img" />
               </div>
             </div>
-          </article>
-        ))}
+
+            <div className="testimonial-meta text-center mt-4">
+              <div className="reviewer-name font-semibold text-[#0f172a]">{t.name}</div>
+              <div className="reviewer-role text-sm text-gray-500">{t.role}</div>
+              <div className="rating-stars mt-2" aria-label={`${t.rating} out of 5 stars`}>
+                {Array.from({ length: t.rating }).map((_, idx) => (
+                  <span key={idx} className="star-icon">★</span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="testimonial-right">
+            <div className="quote-mark">“</div>
+            <p className="testimonial-message text-base text-gray-700 leading-relaxed">{t.text}</p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex items-center justify-center gap-2">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Show testimonial ${i + 1}`}
+              className={`testimonial-dot ${i === index ? 'active' : ''}`}
+              onClick={() => { setVisible(false); setTimeout(() => { setIndex(i); setVisible(true); }, 220); }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
