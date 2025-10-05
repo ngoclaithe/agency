@@ -79,8 +79,13 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 .progress-wrap { height: 4px; background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02)); position: relative; }
 .progress-indicator { height: 4px; background: linear-gradient(90deg, #ff7a2f, #ffb067); width: 0%; transition: width 120ms linear; }
 
-/* Header CTA ghost */
-.header-ghost-cta { display: inline-flex; align-items: center; justify-content: center; padding: 0.45rem 0.75rem; border-radius: 999px; border: 1px solid rgba(15,23,42,0.06); color: #0f172a; background: transparent; font-weight: 700; }
+/* Button styles */
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #2563eb; color: #fff; padding: 0.6rem 1rem; border-radius: 999px; font-weight: 800; text-decoration: none; }
+.btn-primary:hover { filter: brightness(1.02); }
+.btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 0.45rem 0.75rem; border-radius: 999px; border: 1px solid rgba(15,23,42,0.08); color: #0f172a; background: transparent; font-weight: 700; }
+
+/* Header CTA ghost (kept for compatibility) */
+.header-ghost-cta { composes: btn-outline; }
 
 /* Pricing badge */
 .pricing-badge { font-size: 0.85rem; }
@@ -99,7 +104,8 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 }
 
 .hero-background {
-  background-image: url("https://img.funnelish.com/10843/79553/1681836756-main-sec.png?auto=webp&clip=bounds");
+  /* Replaced background image with clean warm gradient */
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,250,252,0.96));
   background-size: cover;
   background-position: center;
 }
@@ -187,9 +193,7 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
   font-weight: 600;
 }
 
-a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
-  opacity: 0.95;
-}
+.btn-primary:hover, .btn-primary:active { opacity: 0.95; transform: translateY(-1px); }
 
 @media (prefers-color-scheme: dark) {
   .marquee-item {
@@ -286,11 +290,11 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 
 /* Accent color for orange text */
 .accent {
-  color: #ff7a2f;
+  color: #2563eb; /* new accent blue */
 }
 
 .trusted-text {
-  color: #ff7a2f;
+  color: #2563eb;
 }
 
 .advertising-overview-section {
@@ -371,7 +375,7 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 
 .video-showcase-section {
   position: relative;
-  background: url("https://img.funnelish.com/10843/84876/1683270528-video-bg.png?auto=webp&clip=bounds") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(245,247,250,1), rgba(241,245,252,1));
 }
 
 .video-overlay-layer {
