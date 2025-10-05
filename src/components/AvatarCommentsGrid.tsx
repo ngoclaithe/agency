@@ -53,8 +53,8 @@ const reviews = [
 export default function AvatarCommentsGrid() {
   return (
     <section className="py-12 sm:py-16">
-      <div className="container mx-auto px-6 sm:px-10">
-        <div className="reviews-grid">
+      <div className="w-full mx-0 px-0">
+        <div className="reviews-grid max-w-full">
           {reviews.map((r, i) => (
             <article key={i} className="review-card">
               <div className="review-header">
