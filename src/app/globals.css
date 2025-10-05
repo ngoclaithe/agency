@@ -743,7 +743,7 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 .country-card > div { min-width: 0; }
 .country-flag { width: 56px; height: 56px; border-radius: 999px; object-fit:cover; border: 3px solid rgba(37,99,235,0.08); }
 .country-card .country-name { font-weight:700; color:#0f172a; }
-.country-card .country-email { color:#2563eb; font-weight:700; }
+.country-card .country-email { color:#2563eb; font-weight:700; display:block; max-width:100%; overflow-wrap:anywhere; word-break:break-word; white-space:normal; }
 .country-card .country-cta { margin-left:auto; padding:0.45rem 0.75rem; border-radius:999px; background: linear-gradient(90deg,#2563eb,#7cc0ff); color:white; font-weight:700; }
 .country-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(15,23,42,0.06); }
 .country-flag { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; }
