@@ -38,7 +38,7 @@ export default function RootLayout({
           <div className="max-w-[1200px] mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
             <a href="/" className="brand-link flex items-center gap-3">
               <span className="brand-logo" aria-hidden="true">
-                <img src="/logo.jpg" alt="Wolves logo" width={36} height={36} onError={(e)=> (e.currentTarget.src = '/logo.png')} className="rounded-mark-img" />
+                <NextImage src="/logo.jpg" alt="Wolves logo" width={36} height={36} className="rounded-mark-img" />
               </span>
 
               <span className={`${playfair.variable} brand-name`} style={{background: 'linear-gradient(90deg,#2563eb,#7cc0ff)', WebkitBackgroundClip: 'text', color: 'transparent'}}>Wolves</span>
