@@ -50,7 +50,7 @@ export default function Home() {
             </div>
 
             <div className="hero-image-frame">
-              <img src="/banner.png" alt="Banner person" />
+              <NextImage src="/banner.png" alt="Banner person" fill priority sizes="(min-width: 1024px) 420px, (min-width: 768px) 50vw, 100vw" />
             </div>
           </div>
         </div>
