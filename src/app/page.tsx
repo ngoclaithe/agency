@@ -213,15 +213,19 @@ export default function Home() {
               <div className="pricing-card-header">
                 <div>
                   <div className="pricing-title">Intermediate Package</div>
+                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
                 </div>
                 <div className="pricing-price">$199</div>
               </div>
 
               <ul className="pricing-features">
                 <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
-                <li><span className="feature-check">✔</span><span>1 x Business Manager</span></li>
+                <li><span className="feature-check">✔</span><span>1 x Business Managers</span></li>
                 <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
-                <li><span className="feature-check">✔</span><span>Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check">✔</span><span>Risk mitigation PDF created by 8 figure marketers</span></li>
+                <li><span className="feature-check">✔</span><span>1 x FREE Trusted FB Pages <small className="text-sm text-gray-500">(Normally Valued at $50)</small></span></li>
+                <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
               </ul>
 
               <a href="#" className="pricing-cta">Choose Plan</a>
@@ -265,6 +269,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="high-spend-banner">
+        <div className="high-spend-inner">
+          <div className="high-spend-title text-lg sm:text-xl font-semibold">Big Campaigns, Need Big Budgets...</div>
+          <div className="high-spend-sub text-sm">Check out our exclusive high-spending accounts today!</div>
+          <button className="high-spend-btn mt-2">Get My High Spending Account Now!</button>
+        </div>
+      </section>
+
+      <div className="text-center">
+        <a href="#contact" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
+      </div>
     </div>
   );
 }
