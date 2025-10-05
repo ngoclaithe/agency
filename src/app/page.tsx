@@ -27,7 +27,7 @@ export default function Home() {
               <p className="hero-sub mt-4 max-w-xl">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
 
               <div className="hero-ctas">
-                <a href="https://t.me/wolves29" className="hero-primary-cta">Click Here To Get Set Up Today! 👉</a>
+                <a href="https://t.me/wolves29" className="hero-primary-cta">Get Started — Instant Setup</a>
                 <a href="#pricing" className="hero-secondary-cta">Compare Plans</a>
               </div>
 
