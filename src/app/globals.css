@@ -182,6 +182,14 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   margin: 0;
 }
 
+/* Fallback visible border when mask not supported */
+@supports not ((-webkit-mask-composite: xor) or (mask-composite: exclude)) {
+  .el-450636 { border: 2px solid #ff7a2f; padding: 16px 18px; background: rgba(0,0,0,0.12); }
+  .el-450636::before { display: none; }
+}
+
+.metric-subtext { color: rgb(230,230,230); background: transparent; font-size: 18px; }
+
 /* Accent color for orange text */
 .accent {
   color: #ff7a2f;
