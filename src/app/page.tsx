@@ -1,4 +1,5 @@
 import NextImage from "next/image";
+import NextImage from "next/image";
 import VideoShowcaseSection from "../components/VideoShowcaseSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import AvatarCommentsGrid from "../components/AvatarCommentsGrid";
@@ -16,62 +17,41 @@ export default function Home() {
   return (
     <div className="font-sans min-h-screen bg-background text-foreground">
       {/* Hero Banner */}
-      <section id="hero" className="relative hero-section hero-split">
-        <div className="absolute inset-0 bg-cover bg-center hero-background" />
-        <div className="absolute inset-0 bg-black/28" />
+      <section id="hero" className="relative hero-section">
+        <div className="absolute inset-0 hero-background" />
 
-        <div className="hero-content z-20 rounded-2xl p-6 sm:p-10 text-white">
-          <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#2563eb] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
-          <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
-            <span className="block">Banned on Facebook?</span>
-            <span className="block">Get Advertising Now!</span>
-          </h1>
+        <div className="container mx-auto px-6 sm:px-10 py-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-[#0f172a] leading-tight">Banned on Facebook? <span className="block text-accent">Get Advertising Now!</span></h1>
 
-          <div className="paragraph-inner mt-4">
-            <ul>
-              <li><strong>24/7 Live Chat Support</strong></li>
-              <li><strong>Lifetime Replacement Guaranteed</strong></li>
-              <li><strong>Hassle-Free Service</strong></li>
-              <li><strong>Ready to Advertise from Day One</strong></li>
-            </ul>
-          </div>
+            <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
 
-          <div className="mt-6 flex items-center gap-6">
-            <a href="https://t.me/wolves29" className="inline-flex items-center justify-center rounded-full btn-primary text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition">Click Here To Get Set Up Today! 👉</a>
-          </div>
-
-          <div className="rating mt-4 flex items-center gap-3">
-            <div className="stars flex items-center gap-1">
-              <span className="star text-yellow-400">★</span>
-              <span className="star text-yellow-400">★</span>
-              <span className="star text-yellow-400">★</span>
-              <span className="star text-yellow-400">★</span>
-              <span className="star text-yellow-400">★</span>
+            <div className="mt-8 flex justify-center gap-4">
+              <a href="https://t.me/wolves29" className="btn-primary px-10 py-4 text-lg">Click Here To Get Set Up Today! 👉</a>
+              <a href="#pricing" className="btn-outline px-8 py-3">Compare Plans</a>
             </div>
-            <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
-          </div>
 
-          <div id="450636" className="headline el-450636 light-text h-btn mt-6">
-            <div className="headline-accent" aria-hidden="true">
-              <svg viewBox="0 0 300 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="headline-accent-svg">
-                <defs>
-                  <linearGradient id="grad-450636" x1="0" x2="1">
-                    <stop offset="0%" stopColor="#2563eb" stopOpacity="1" />
-                    <stop offset="100%" stopColor="#2563eb" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                <rect className="accent-rect" x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeLinecap="round" />
-              </svg>
+            <div className="mt-10 flex items-center justify-center gap-6 text-sm text-gray-600">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#0f172a]">$100M+</div>
+                <div className="text-xs">Ad Spend via our accounts</div>
+              </div>
+
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#0f172a]">10+</div>
+                <div className="text-xs">Years aged accounts</div>
+              </div>
+
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#0f172a]">100%</div>
+                <div className="text-xs">US registered IPs</div>
+              </div>
             </div>
-            <div className="headline-inner">
-              <h3><strong>$100M+</strong></h3>
-              <p><span className="metric-subtext">Ad Spend Via Our Accounts</span></p>
+
+            <div className="mt-12">
+              <img src="/anhbanner.webp" alt="Banner person" className="mx-auto w-full max-w-[680px] rounded-2xl shadow-2xl object-contain" />
             </div>
           </div>
-        </div>
-
-        <div className="hero-image zig-media relative z-30 flex items-center justify-center">
-          <NextImage src="/anhbanner.webp" alt="Banner person" width={900} height={900} priority className="object-contain w-full max-w-[640px] rounded-[20px] shadow-2xl" />
         </div>
       </section>
 
