@@ -21,7 +21,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/28" />
 
         <div className="hero-content z-20 rounded-2xl p-6 sm:p-10 text-white">
-          <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#ff7a2f] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
+          <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#2563eb] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
           <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
             <span className="block">Banned on Facebook?</span>
             <span className="block">Get Advertising Now!</span>
@@ -56,8 +56,8 @@ export default function Home() {
               <svg viewBox="0 0 300 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="headline-accent-svg">
                 <defs>
                   <linearGradient id="grad-450636" x1="0" x2="1">
-                    <stop offset="0%" stopColor="#ff7a2f" stopOpacity="1" />
-                    <stop offset="100%" stopColor="#ff7a2f" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#2563eb" stopOpacity="1" />
+                    <stop offset="100%" stopColor="#2563eb" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <rect className="accent-rect" x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeLinecap="round" />
