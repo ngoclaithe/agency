@@ -37,7 +37,7 @@ export default function Home() {
           </div>
 
           <div className="mt-6 flex items-center gap-6">
-            <a href="https://t.me/wolves29" className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition">Click Here To Get Set Up Today! 👉</a>
+            <a href="https://t.me/wolves29" className="inline-flex items-center justify-center rounded-full btn-primary text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition">Click Here To Get Set Up Today! 👉</a>
           </div>
 
           <div className="rating mt-4 flex items-center gap-3">
@@ -194,7 +194,7 @@ export default function Home() {
 
             <div className="pricing-card text-left featured">
               <div className="pricing-card-header flex flex-col items-start">
-                <div className="pricing-badge inline-flex items-center gap-2 px-3 py-1 bg-[#ff7a2f] text-white rounded-full font-semibold">Most popular</div>
+                <div className="pricing-badge inline-flex items-center gap-2 px-3 py-1 btn-primary text-white rounded-full font-semibold">Most popular</div>
                 <div className="pricing-title mt-3">Verified Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$499</div>
@@ -328,7 +328,7 @@ export default function Home() {
           <p className="mt-4 text-sm text-gray-500">Still Got A Question?</p>
           <h3 className="mt-4 text-3xl font-semibold text-[#0f172a]">Contact us to speak to one of our experts!</h3>
           <div className="mt-6">
-            <a className="inline-block bg-[#ff7a2f] text-white px-8 py-3 rounded-lg font-semibold">Speak to Live chat. 👉</a>
+            <a className="inline-block btn-primary text-white px-8 py-3 rounded-lg font-semibold">Speak to Live chat. 👉</a>
           </div>
 
           <p className="mt-6 text-sm text-gray-400">You can also contact us 24/7 on</p>
