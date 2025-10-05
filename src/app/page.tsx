@@ -204,8 +204,6 @@ export default function Home() {
       <VideoShowcaseSection />
       <TestimonialsSection />
 
-      <AvatarCommentsGrid />
-
       <section className="pricing-section py-12 sm:py-20">
         <div className="container mx-auto px-6 sm:px-10 text-center">
           <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Our Tailored Packages</p>
@@ -290,6 +288,8 @@ export default function Home() {
           <button className="high-spend-btn mt-2">Get My High Spending Account Now!</button>
         </div>
       </section>
+
+      <AvatarCommentsGrid />
 
       <div className="text-center">
         <a href="#contact" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
