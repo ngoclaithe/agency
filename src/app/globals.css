@@ -90,6 +90,8 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 /* Pricing badge */
 .pricing-badge { font-size: 0.85rem; }
 
+/* Backwards compatibility: main-cta-orange uses primary styling */
+.main-cta-orange { background: #2563eb; color: #fff; padding: 0.6rem 1rem; border-radius: 6px; font-weight: 700; display: inline-block; }
 /* Ensure hero split sizing */
 .hero-split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding: 3rem 1rem; }
 @media (max-width: 768px) { .hero-split { grid-template-columns: 1fr; padding: 2rem 1rem; } }
@@ -296,6 +298,9 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 .trusted-text {
   color: #2563eb;
 }
+
+.text-accent { color: #2563eb; }
+.main-cta-orange { composes: btn-primary; display: inline-block; }
 
 .advertising-overview-section {
   background: #f8fafc;
