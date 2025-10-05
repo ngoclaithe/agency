@@ -47,7 +47,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-cover bg-center hero-background" />
         <div className="absolute inset-0 bg-black/30" />
 
-        <div className="relative container mx-auto max-w-[1200px] px-2 sm:px-4 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 h-auto min-h-[520px] lg:h-[560px]">
+        <div className="relative container mx-auto max-w-[1200px] px-2 sm:px-4 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 h-auto min-h-[520px] md:h-[560px]">
           {/* Left: Text Card */}
           <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
             <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#ff7a2f] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
 
           {/* Right: Banner image overlapping */}
-          <div className="hero-image block relative z-30 mt-6 lg:mt-0 lg:absolute lg:right-10 lg:bottom-0">
+          <div className="hero-image block relative z-30 mt-6 md:mt-0 md:absolute md:right-10 md:bottom-0">
             <NextImage
               src="/anhbanner.webp"
               alt="Banner person"
