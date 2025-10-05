@@ -193,9 +193,10 @@ export default function Home() {
               <a href="#" className="pricing-cta block mx-auto">Choose Plan</a>
             </div>
 
-            <div className="pricing-card text-left">
+            <div className="pricing-card text-left featured">
               <div className="pricing-card-header flex flex-col items-start">
-                <div className="pricing-title">Verified Package</div>
+                <div className="pricing-badge inline-flex items-center gap-2 px-3 py-1 bg-[#ff7a2f] text-white rounded-full font-semibold">Most popular</div>
+                <div className="pricing-title mt-3">Verified Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$499</div>
                   <NextImage src="/499.webp" alt="499 package badge" width={112} height={112} className="object-contain" />
