@@ -212,14 +212,20 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 .marquee {
   overflow: hidden;
   position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
+/* make the track at least twice the container so the looping translateX(-50%) never exposes empty space
+   and ensure it doesn't contribute to layout width (keeps everything inside the overflow:hidden container) */
 .marquee-track {
   display: flex;
   gap: 1.5rem;
   align-items: center;
   width: max-content;
+  min-width: 200%;
   animation: marquee 22s linear infinite;
+  will-change: transform;
 }
 
 @keyframes marquee {
