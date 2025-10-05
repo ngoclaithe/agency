@@ -135,6 +135,9 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   display: inline-block;
   padding: 0;
   background: transparent !important;
+  /* Force visible border for all browsers */
+  border: 2px solid rgba(255,122,47,1);
+  box-shadow: 0 6px 18px rgba(255,122,47,0.08);
 }
 
 .el-450636::before {
@@ -150,7 +153,7 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
   mask-composite: exclude;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1; /* put behind the visible border */
 }
 
 /* Responsive: reduce border thickness on small screens */
