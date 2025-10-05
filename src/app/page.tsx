@@ -95,7 +95,7 @@ export default function Home() {
                         <stop offset="100%" stopColor="#ff7a2f" stopOpacity="0" />
                       </linearGradient>
                     </defs>
-                    <rect x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeWidth="6" strokeLinecap="round" />
+                    <rect className="accent-rect" x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeLinecap="round" />
                   </svg>
                 </div>
                 <div className="headline-inner">
