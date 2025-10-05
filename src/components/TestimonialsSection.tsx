@@ -92,23 +92,27 @@ export default function TestimonialsSection() {
             </div>
 
             <div key={`content-${active}`} className="testimonial-content mt-4 md:mt-0 animate-in-right">
-              <div className="testimonial-header">
+              <div className="testimonial-quote-row">
+                <NextImage src="/phay.webp" alt="quote" width={28} height={28} className="shrink-0" />
+                <p className="testimonial-message text-sm leading-relaxed text-gray-700 dark:text-gray-300">{testimonials[active].text}</p>
+              </div>
+
+              <div className="testimonial-footer mt-4 flex items-center justify-between gap-4">
                 <div className="reviewer-meta">
                   <div className="reviewer-name">{testimonials[active].name}</div>
                   <div className="reviewer-role">{testimonials[active].role}</div>
+                </div>
+
+                <div className="footer-right flex items-center gap-4">
+                  <div className="rating-stars" aria-label={`${testimonials[active].rating} out of 5 stars`}>
+                    {Array.from({ length: testimonials[active].rating }).map((_, i) => (
+                      <span key={i} className="star-icon">★</span>
+                    ))}
+                  </div>
                   {testimonials[active].verified ? (
                     <span className="verified-badge"><span aria-hidden="true">✔</span> Verified Review</span>
                   ) : null}
                 </div>
-                <div className="rating-stars" aria-label={`${testimonials[active].rating} out of 5 stars`}>
-                  {Array.from({ length: testimonials[active].rating }).map((_, i) => (
-                    <span key={i} className="star-icon">★</span>
-                  ))}
-                </div>
-              </div>
-              <div className="testimonial-quote-row">
-                <NextImage src="/phay.webp" alt="quote" width={28} height={28} className="shrink-0" />
-                <p className="testimonial-message text-sm leading-relaxed text-gray-700 dark:text-gray-300">{testimonials[active].text}</p>
               </div>
             </div>
           </article>
