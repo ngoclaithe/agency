@@ -217,14 +217,15 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
   position: relative;
   width: 100%;
   max-width: 100%;
+  min-height: 88px; /* reserve height for logos so absolute track doesn't hide (matches logo size + padding) */
 }
 
-/* make the track at least twice the container so the looping translateX(-50%) never exposes empty space
-   and ensure it doesn't contribute to layout width (keeps everything inside the overflow:hidden container) */
+/* absolutely position the track so it doesn't affect layout width, and center it vertically */
 .marquee-track {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   gap: 1.5rem;
   align-items: center;
