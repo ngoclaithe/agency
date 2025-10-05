@@ -235,14 +235,19 @@ export default function Home() {
 
       <section className="high-spend-banner section-surface">
         <div className="high-spend-inner">
-          <div className="high-spend-title text-lg sm:text-xl font-semibold">Big Campaigns, Need Big Budgets...</div>
-          <div className="high-spend-sub text-sm">Check out our exclusive high-spending accounts today!</div>
-          <button className="high-spend-btn mt-2">Get My High Spending Account Now!</button>
+          <div>
+            <div className="high-spend-title text-lg sm:text-xl">Big Campaigns, Need Big Budgets...</div>
+            <div className="high-spend-sub text-sm mt-1">Check out our exclusive high-spending accounts today!</div>
+          </div>
+
+          <div>
+            <button className="high-spend-cta">Get My High Spending Account Now!</button>
+          </div>
         </div>
       </section>
 
       <div className="text-center mt-6">
-        <a href="https://t.me/wolves29" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
+        <a href="https://t.me/wolves29" className="main-cta-prominent">Click Here To Get Set Up Today! 👉</a>
       </div>
 
       <section id="reviews" className="section-surface">
