@@ -100,6 +100,9 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 .zig-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; max-width: 1200px; margin: 0 auto; padding: 2rem; }
 .zig-row.zig-right .zig-media { order: 2; }
 .zig-row.zig-left .zig-media { order: 1; }
+
+/* Ensure media panels never cause horizontal overflow */
+.zig-media { overflow: hidden; }
 @media (max-width: 768px) { .zig-row { grid-template-columns: 1fr; } .zig-row .zig-media, .zig-row .zig-copy { order: unset; } }
 
 /* PRICING - featured card */
@@ -212,14 +215,24 @@ html.force-light { --background: #f7fafc; --foreground: #0f172a; }
 .marquee {
   overflow: hidden;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 88px; /* reserve height for logos so absolute track doesn't hide (matches logo size + padding) */
 }
 
+/* absolutely position the track so it doesn't affect layout width, and center it vertically */
 .marquee-track {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   gap: 1.5rem;
   align-items: center;
   width: max-content;
   animation: marquee 22s linear infinite;
+  will-change: transform;
+  white-space: nowrap; /* prevent wrapping which can expand height/width unpredictably */
 }
 
 @keyframes marquee {
