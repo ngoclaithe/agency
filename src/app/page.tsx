@@ -78,13 +78,14 @@ export default function Home() {
 
       {/* Partners */}
       <section id="partners" className="partners-section section-surface py-12 sm:py-16">
-        <div className="container mx-auto px-6 sm:px-10">
-          <div className="text-center">
-            <p className="text-sm uppercase tracking-wide opacity-70 trusted-text">Trusted by top affiliates, offer owners and established brands.</p>
-            <h2 className="mt-2 text-2xl sm:text-3xl font-semibold">Advertisers from the <span className="accent">best</span>.</h2>
+        <div className="zig-row zig-left">
+          <div className="zig-copy text-left">
+            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Trusted by top affiliates, offer owners and established brands.</p>
+            <h2 className="mt-4 text-3xl font-bold">Advertisers from the <span className="accent">best</span>.</h2>
+            <p className="mt-3 text-sm text-gray-600">We work with high-performing affiliates and established brands across multiple verticals. Our partners trust us to keep campaigns running and scale safely.</p>
           </div>
 
-          <div className="mt-8 sm:mt-10">
+          <div className="zig-media">
             <div className="marquee">
               <div className="marquee-track">
                 {[...partners, ...partners].map((src, idx) => (
