@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className="force-light">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <header className="site-header sticky top-0 z-50">
+          <ScrollProgress />
           <div className="max-w-[1200px] mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
             <a href="/" className="brand-link flex items-center gap-2">
               <NextImage src="/logo.png" alt="Wolves" width={32} height={32} className="brand-logo" />
@@ -39,7 +40,10 @@ export default function RootLayout({
               <a href="#testimonials" className="nav-link">Testimonials</a>
               <a href="#faqs" className="nav-link">FAQs</a>
             </nav>
-            <a href="https://t.me/wolves29" className="header-cta">Contact</a>
+            <div className="flex items-center gap-3">
+              <a href="https://t.me/wolves29" className="header-cta">Contact</a>
+              <a href="#hero" className="header-ghost-cta">Get Started</a>
+            </div>
           </div>
         </header>
         <main className="site-main">{children}</main>
