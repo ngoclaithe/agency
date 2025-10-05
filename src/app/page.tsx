@@ -240,7 +240,7 @@ export default function Home() {
           </div>
 
           <div>
-            <button className="high-spend-cta">Get My High Spending Account Now!</button>
+            <button className="high-spend-cta">Explore High-Spend Accounts</button>
           </div>
         </div>
       </section>
