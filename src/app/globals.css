@@ -500,7 +500,7 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 
 /* High spend banner */
 .high-spend-banner { margin-top: 2rem; background: linear-gradient(90deg, #0b6b56, #0f8a6e); color: white; border-radius: 12px; padding: 2rem; box-shadow: 0 30px 60px rgba(15,23,42,0.12); }
-.high-spend-inner { max-width: 920px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.high-spend-inner { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
 .high-spend-title { font-weight: 700; }
 .high-spend-sub { color: rgba(255,255,255,0.9); }
 .high-spend-btn { border: 1px solid rgba(255,255,255,0.2); padding: 0.6rem 1rem; border-radius: 8px; color: white; background: transparent; }
