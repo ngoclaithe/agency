@@ -219,11 +219,14 @@ export default function Home() {
                   <div className="pricing-price">$199</div>
                   <NextImage src="/199.webp" alt="199 package badge" width={56} height={56} className="object-contain" />
                 </div>
-                <div className="pricing-billed text-xs mt-2">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                <div className="pricing-billed mt-2">
+                  <div className="font-semibold">Billed monthly · No Setup Costs</div>
+                  <div className="text-xs mt-1">and 0% of Ad Spend</div>
+                </div>
               </div>
 
               <ul className="pricing-features">
-                <li><span className="feature-check">��</span><span>1 x US Profile</span></li>
+                <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
                 <li><span className="feature-check">✔</span><span>1 x Business Managers</span></li>
                 <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
                 <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
@@ -242,7 +245,10 @@ export default function Home() {
                   <div className="pricing-price">$499</div>
                   <NextImage src="/499.webp" alt="499 package badge" width={56} height={56} className="object-contain" />
                 </div>
-                <div className="pricing-billed text-xs mt-2">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                <div className="pricing-billed mt-2">
+                  <div className="font-semibold">Billed monthly · No Setup Costs</div>
+                  <div className="text-xs mt-1">and 0% of Ad Spend</div>
+                </div>
               </div>
 
               <ul className="pricing-features">
@@ -266,7 +272,10 @@ export default function Home() {
                   <div className="pricing-price">$299</div>
                   <NextImage src="/299.webp" alt="299 package badge" width={56} height={56} className="object-contain" />
                 </div>
-                <div className="pricing-billed text-xs mt-2">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                <div className="pricing-billed mt-2">
+                  <div className="font-semibold">Billed monthly · No Setup Costs</div>
+                  <div className="text-xs mt-1">and 0% of Ad Spend</div>
+                </div>
               </div>
 
               <ul className="pricing-features">
