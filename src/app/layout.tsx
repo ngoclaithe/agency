@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NextImage from "next/image";
+import ScrollProgress from "../components/ScrollProgress";
 import "./globals.css";
 
 const geistSans = Geist({
