@@ -52,7 +52,7 @@ export default function Home() {
         <div className="relative container mx-auto px-2 sm:px-4 flex items-center h-[500px] sm:h-[560px] justify-start">
           {/* Left: Text Card */}
           <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
-            <div className="hero-logo"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /></div>
+            <div className="hero-logo mt-2"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /><span className="ml-2 font-extrabold text-2xl bg-gradient-to-r from-[#ff7a2f] to-[#ff9a60] bg-clip-text text-transparent tracking-wide">Wolves</span></div>
             <h1 className="text-2xl sm:text-4xl font-semibold leading-tight">
               <span className="block">Banned on Facebook?</span>
               <span className="block">Get Advertising Now!</span>
@@ -69,7 +69,7 @@ export default function Home() {
 
             <div className="mt-6">
               <a
-                href="#contact"
+                href="https://t.me/wolves29"
                 className="inline-flex items-center justify-center rounded-full bg-[#ff7a2f] text-white px-8 py-4 text-base sm:text-lg font-semibold hover:opacity-95 transition"
               >
                 Click Here To Get Set Up Today! 👉
@@ -216,9 +216,12 @@ export default function Home() {
               <div className="pricing-card-header">
                 <div>
                   <div className="pricing-title">Intermediate Package</div>
-                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
                 </div>
-                <div className="pricing-price">$199</div>
+                <div className="flex flex-col items-end">
+                  <div className="pricing-price">$199</div>
+                  <div className="pricing-billed text-xs">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                </div>
+                <img src="/199.webp" alt="199 package badge" className="w-14 h-14 object-contain" />
               </div>
 
               <ul className="pricing-features">
@@ -238,9 +241,12 @@ export default function Home() {
               <div className="pricing-card-header">
                 <div>
                   <div className="pricing-title">Verified Package</div>
-                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
                 </div>
-                <div className="pricing-price">$499</div>
+                <div className="flex flex-col items-end">
+                  <div className="pricing-price">$499</div>
+                  <div className="pricing-billed text-xs">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                </div>
+                <img src="/499.webp" alt="499 package badge" className="w-14 h-14 object-contain" />
               </div>
 
               <ul className="pricing-features">
@@ -261,9 +267,12 @@ export default function Home() {
               <div className="pricing-card-header">
                 <div>
                   <div className="pricing-title">Expert Package</div>
-                  <div className="pricing-billed">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
                 </div>
-                <div className="pricing-price">$299</div>
+                <div className="flex flex-col items-end">
+                  <div className="pricing-price">$299</div>
+                  <div className="pricing-billed text-xs">Billed monthly · No Setup Costs and 0% of Ad Spend</div>
+                </div>
+                <img src="/299.webp" alt="299 package badge" className="w-14 h-14 object-contain" />
               </div>
 
               <ul className="pricing-features">
@@ -291,7 +300,7 @@ export default function Home() {
       </section>
 
       <div className="text-center mt-6">
-        <a href="#contact" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
+        <a href="https://t.me/wolves29" className="main-cta-orange">Click Here To Get Set Up Today! 👉</a>
       </div>
 
       <AvatarCommentsGrid />
@@ -351,9 +360,9 @@ export default function Home() {
 
           <p className="mt-6 text-sm text-gray-400">You can also contact us 24/7 on</p>
           <div className="mt-4 flex items-center justify-center gap-6">
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center">💬</div>
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center">✉️</div>
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center">✈️</div>
+            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/mess.svg" alt="Messenger" width={24} height={24} /></div>
+            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/mess2.svg" alt="Messenger Alt" width={24} height={24} /></div>
+            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/tele.svg" alt="Telegram" width={24} height={24} /></div>
           </div>
         </div>
       </section>
