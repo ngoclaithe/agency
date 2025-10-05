@@ -11,7 +11,7 @@ const VideoShowcaseSection = () => {
     <section className="video-showcase-section py-16 sm:py-20">
       <div className="video-overlay-layer">
         <div className="container mx-auto px-6 sm:px-10">
-          <div className="max-w-3xl mx-auto text-center text-white">
+          <div className="max-w-3xl mx-auto text-center text-[#0f172a]">
             <p className="text-sm uppercase tracking-wide text-[#ffb067]">Your Success, Amplified Now!</p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-semibold">Scale your business to the next level.</h2>
             <p className="mt-4 text-base sm:text-lg text-white/80 leading-relaxed">
