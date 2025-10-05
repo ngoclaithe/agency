@@ -140,18 +140,11 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 }
 
 .el-450636::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  /* subtle left accent behind the badge */
-  padding: 20px 18px 20px 36px;
-  background: linear-gradient(90deg, rgba(255,122,47,0.9) 0%, rgba(255,122,47,0.45) 30%, rgba(255,122,47,0) 100%);
-  pointer-events: none;
-  z-index: -2; /* keep it behind the border/inner content */
+  /* Removed background accent to avoid tinting the badge background */
+  display: none;
 }
 
-/* SVG accent (gradient stroke) sits behind content but above decorative ::before */
+/* SVG accent (gradient stroke) sits behind content */
 .headline-accent {
   position: absolute;
   inset: 0;
@@ -164,6 +157,22 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+/* Target rectangle stroke and ensure only stroke visible */
+.headline-accent-svg .accent-rect {
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/* Mobile: thinner stroke and adjusted paddings */
+@media (max-width: 640px) {
+  .headline-accent-svg .accent-rect { stroke-width: 1.2; }
+  .el-450636 { margin-top: 14px; }
+  .el-450636 .headline-inner { padding: 4px 8px; }
+  .el-450636 .headline-inner h3 { font-size: 20px; margin-bottom: 2px; }
+  .el-450636 .headline-inner p { font-size: 13px; }
 }
 
 /* Responsive: reduce border thickness on small screens */
