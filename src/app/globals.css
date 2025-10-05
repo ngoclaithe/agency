@@ -75,6 +75,17 @@ body {
 .progress-wrap { height: 4px; background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02)); position: relative; }
 .progress-indicator { height: 4px; background: linear-gradient(90deg, #ff7a2f, #ffb067); width: 0%; transition: width 120ms linear; }
 
+/* Header CTA ghost */
+.header-ghost-cta { display: inline-flex; align-items: center; justify-content: center; padding: 0.45rem 0.75rem; border-radius: 999px; border: 1px solid rgba(15,23,42,0.06); color: #0f172a; background: transparent; font-weight: 700; }
+
+/* Pricing badge */
+.pricing-badge { font-size: 0.85rem; }
+
+/* Ensure hero split sizing */
+.hero-split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding: 3rem 1rem; }
+@media (max-width: 768px) { .hero-split { grid-template-columns: 1fr; padding: 2rem 1rem; } }
+.hero-content { max-width: 640px; }
+
 .hero-overlay {
   z-index: 5;
 }
