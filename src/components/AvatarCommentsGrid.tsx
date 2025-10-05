@@ -1,5 +1,7 @@
 import NextImage from "next/image";
 
+import React, { useEffect, useMemo, useState } from "react";
+
 const reviews = [
   {
     avatar: "/nguoi1.webp",
@@ -51,26 +53,59 @@ const reviews = [
 ];
 
 export default function AvatarCommentsGrid() {
+  const VISIBLE = 2; // number of cards visible at once
+  const [startIndex, setStartIndex] = useState(0);
+
+  const total = reviews.length;
+
+  // compute currently visible items (wrap-around)
+  const visible = useMemo(() => {
+    const out = [];
+    for (let i = 0; i < VISIBLE; i++) {
+      out.push(reviews[(startIndex + i) % total]);
+    }
+    return out;
+  }, [startIndex, total]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStartIndex((s) => (s + VISIBLE) % total);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [total]);
+
+  function goPrev() {
+    setStartIndex((s) => (s - VISIBLE + total) % total);
+  }
+  function goNext() {
+    setStartIndex((s) => (s + VISIBLE) % total);
+  }
+
   return (
-    <section className="py-12 sm:py-16">
-      <div className="w-full mx-0 px-0">
-        <div className="reviews-grid max-w-full">
-          {reviews.map((r, i) => (
-            <article key={i} className="review-card">
-              <div className="review-header">
-                <NextImage
-                  src={r.avatar}
-                  alt={`${r.name} avatar`}
-                  width={48}
-                  height={48}
-                  className="review-avatar"
-                />
+    <section className="py-12 sm:py-16 avatar-comments" aria-label="Customer testimonials">
+      <div className="container mx-auto px-6 sm:px-10">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-lg font-semibold">What Clients Say</h3>
+          <div className="flex gap-2">
+            <button type="button" aria-label="Previous testimonials" onClick={goPrev} className="carousel-button">◀</button>
+            <button type="button" aria-label="Next testimonials" onClick={goNext} className="carousel-button">▶</button>
+          </div>
+        </div>
+
+        <div className="testimonial-list grid grid-cols-1 sm:grid-cols-2 gap-4" role="region" aria-live="polite">
+          {visible.map((r, idx) => (
+            <article key={`${r.name}-${idx}`} className="testimonial-card p-4 bg-white rounded-lg shadow-sm border">
+              <div className="testimonial-header flex items-start gap-3">
+                <NextImage src={r.avatar} alt={`${r.name} avatar`} width={56} height={56} className="testimonial-avatar rounded-full object-cover" />
                 <div>
-                  <div className="review-name">{r.name}</div>
-                  <div className="review-stars" aria-hidden="true">★★★★★</div>
+                  <div className="testimonial-name font-semibold">{r.name}</div>
+                  <div className="testimonial-stars text-yellow-500" aria-hidden>
+                    ★★★★★
+                  </div>
                 </div>
               </div>
-              <p className="review-text">{r.text}</p>
+
+              <p className="testimonial-text mt-3 text-sm text-gray-700">{r.text}</p>
             </article>
           ))}
         </div>
