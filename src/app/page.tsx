@@ -1,5 +1,4 @@
 import NextImage from "next/image";
-import NextImage from "next/image";
 import VideoShowcaseSection from "../components/VideoShowcaseSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import AvatarCommentsGrid from "../components/AvatarCommentsGrid";
