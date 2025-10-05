@@ -362,7 +362,7 @@ export default function Home() {
       <footer className="site-footer bg-[#07201a] text-white py-6">
         <div className="max-w-[1200px] mx-auto px-2 sm:px-4 flex items-center justify-between">
           <div className="footer-left flex items-center gap-4">
-            <NextImage src="/logo.jpg" alt="logo" width={84} height={28} className="footer-logo" />
+            <NextImage src="/logo.jpg" alt="logo" width={56} height={20} className="footer-logo" />
           </div>
 
           <div className="footer-center text-sm opacity-80">Copyright by 2025 @ Exiscale LLC</div>
