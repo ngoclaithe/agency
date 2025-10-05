@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import NextImage from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,10 +25,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="force-light">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header className="site-header sticky top-0 z-50">
+          <div className="max-w-[1200px] mx-auto px-2 sm:px-4 h-14 flex items-center justify-between">
+            <a href="/" className="brand-link flex items-center gap-2">
+              <NextImage src="/logo.png" alt="Wolves" width={32} height={32} className="brand-logo" />
+              <span className="brand-name">Wolves</span>
+            </a>
+            <nav className="header-nav hidden sm:flex items-center gap-4">
+              <a href="#results" className="nav-link">Kết quả</a>
+              <a href="#pricing" className="nav-link">Gói</a>
+              <a href="#testimonials" className="nav-link">Đánh giá</a>
+              <a href="#faqs" className="nav-link">FAQs</a>
+            </nav>
+            <a href="https://t.me/wolves29" className="header-cta">Liên hệ</a>
+          </div>
+        </header>
+        <main className="site-main">{children}</main>
       </body>
     </html>
   );
