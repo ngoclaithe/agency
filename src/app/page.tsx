@@ -247,7 +247,7 @@ export default function Home() {
       </section>
 
       <div className="text-center mt-6">
-        <a href="https://t.me/wolves29" className="main-cta-prominent">Click Here To Get Set Up Today! 👉</a>
+        <a href="https://t.me/wolves29" className="main-cta-prominent">Get Started — Instant Setup</a>
       </div>
 
       <section id="reviews" className="section-surface">
