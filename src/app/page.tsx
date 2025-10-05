@@ -315,20 +315,19 @@ export default function Home() {
       </section>
 
       {/* Badge / Contact prompt */}
-      <section id="contact" className="badge-contact-section section-surface py-12 sm:py-16 text-center">
-        <div className="max-w-2xl mx-auto">
-          <NextImage src="/badgee.svg" alt="Badge" width={120} height={120} className="mx-auto" />
-          <p className="mt-4 text-sm text-gray-500">Still Got A Question?</p>
-          <h3 className="mt-4 text-3xl font-semibold text-[#0f172a]">Contact us to speak to one of our experts!</h3>
-          <div className="mt-6">
-            <a className="inline-block btn-primary text-white px-8 py-3 rounded-lg font-semibold">Speak to Live chat. 👉</a>
+      <section id="contact" className="badge-contact-section">
+        <div className="badge-contact-inner">
+          <div className="badge-contact-visual">
+            <NextImage src="/badgee.svg" alt="Badge" width={96} height={96} />
           </div>
 
-          <p className="mt-6 text-sm text-gray-400">You can also contact us 24/7 on</p>
-          <div className="mt-4 flex items-center justify-center gap-6">
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/mess.svg" alt="Messenger" width={24} height={24} /></div>
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/mess2.svg" alt="Messenger Alt" width={24} height={24} /></div>
-            <div className="contact-icon w-12 h-12 rounded-full bg-white/80 flex items-center justify-center"><NextImage src="/tele.svg" alt="Telegram" width={24} height={24} /></div>
+          <div className="badge-contact-copy">
+            <div className="badge-contact-title">Still Got A Question?</div>
+            <div className="badge-contact-sub">Contact us to speak to one of our experts — available 24/7 for setup and support.</div>
+          </div>
+
+          <div>
+            <a href="https://t.me/wolves29" className="badge-contact-cta">Start Live Chat</a>
           </div>
         </div>
       </section>
