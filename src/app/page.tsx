@@ -281,27 +281,37 @@ export default function Home() {
 
       {/* Country contact emails */}
       <section id="contacts" className="country-contacts-section section-surface py-8 sm:py-12">
-        <div className="max-w-[1200px] mx-auto px-2 sm:px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { img: "/aus.webp", country: "Australia", email: "australia@exiscale.com" },
-              { img: "/nz.webp", country: "New Zealand", email: "newzealand@exiscale.com" },
-              { img: "/phil.webp", country: "Philippines", email: "philippines@exiscale.com" },
-              { img: "/singapo.webp", country: "Singapore", email: "singapore@exiscale.com" },
-              { img: "/thailand.webp", country: "Thailand", email: "thailand@exiscale.com" },
-              { img: "/uk.webp", country: "United Kingdom", email: "uk@exiscale.com" },
-              { img: "/usa.webp", country: "United States", email: "usa@exiscale.com" },
-              { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
-              { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
-            ].map((c) => (
-              <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg bg-white hover:shadow-md hover:-translate-y-1 transition-transform">
-                <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
-                <div>
-                  <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
-                  <div className="country-email text-sm text-[#ff7a2f]">{c.email}</div>
-                </div>
+        <div className="zig-row zig-right">
+          <div className="zig-copy">
+            <p className="text-sm uppercase tracking-wide text-[#ff7a2f]">Local Support Worldwide</p>
+            <h3 className="mt-3 text-2xl font-semibold text-[#0f172a]">Contact our regional teams</h3>
+            <p className="mt-2 text-sm text-gray-600">Available 24/7 across multiple countries — reach out to the team in your region to get tailored advice.</p>
+          </div>
+
+          <div className="zig-media">
+            <div className="max-w-[1200px] mx-auto px-2 sm:px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { img: "/aus.webp", country: "Australia", email: "australia@exiscale.com" },
+                  { img: "/nz.webp", country: "New Zealand", email: "newzealand@exiscale.com" },
+                  { img: "/phil.webp", country: "Philippines", email: "philippines@exiscale.com" },
+                  { img: "/singapo.webp", country: "Singapore", email: "singapore@exiscale.com" },
+                  { img: "/thailand.webp", country: "Thailand", email: "thailand@exiscale.com" },
+                  { img: "/uk.webp", country: "United Kingdom", email: "uk@exiscale.com" },
+                  { img: "/usa.webp", country: "United States", email: "usa@exiscale.com" },
+                  { img: "/canada.webp", country: "Canada", email: "canada@exiscale.com" },
+                  { img: "/ireland.webp", country: "Ireland", email: "ireland@exiscale.com" },
+                ].map((c) => (
+                  <div key={c.email} className="country-card flex items-center gap-4 p-4 rounded-lg bg-white hover:shadow-md hover:-translate-y-1 transition-transform">
+                    <NextImage src={c.img} alt={`${c.country} flag`} width={56} height={56} className="country-flag" />
+                    <div>
+                      <div className="country-name font-semibold text-[#0f172a]">{c.country}</div>
+                      <div className="country-email text-sm text-[#ff7a2f]">{c.email}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
