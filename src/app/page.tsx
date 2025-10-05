@@ -86,10 +86,21 @@ export default function Home() {
                 <div className="rating-text text-sm opacity-90">4.8/5 star reviews</div>
               </div>
 
-              <div id="450636" className="headline el-450636 light-text h-btn" style={{color: 'white', paddingTop: '10px', textShadow: 'transparent 0px 0px 0px', marginTop: '28px'}}>
+              <div id="450636" className="headline el-450636 light-text h-btn">
+                <div className="headline-accent" aria-hidden="true">
+                  <svg viewBox="0 0 300 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="headline-accent-svg">
+                    <defs>
+                      <linearGradient id="grad-450636" x1="0" x2="1">
+                        <stop offset="0%" stopColor="#ff7a2f" stopOpacity="1" />
+                        <stop offset="100%" stopColor="#ff7a2f" stopOpacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <rect className="accent-rect" x="3" y="3" width="294" height="74" rx="10" fill="none" stroke="url(#grad-450636)" strokeLinecap="round" />
+                  </svg>
+                </div>
                 <div className="headline-inner">
                   <h3><strong>$100M+</strong></h3>
-                  <p><span style={{color: 'rgb(230,230,230)', backgroundColor: 'transparent', fontSize: '18px'}}>Ad Spend Via Our Accounts</span></p>
+                  <p><span className="metric-subtext">Ad Spend Via Our Accounts</span></p>
                 </div>
               </div>
             </div>
@@ -217,7 +228,7 @@ export default function Home() {
                 <div className="pricing-title">Intermediate Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$199</div>
-                  <NextImage src="/199.webp" alt="199 package badge" width={56} height={56} className="object-contain" />
+                  <NextImage src="/199.webp" alt="199 package badge" width={112} height={112} className="object-contain" />
                 </div>
                 <div className="pricing-billed mt-2">
                   <div className="font-semibold">Billed monthly · No Setup Costs</div>
@@ -243,7 +254,7 @@ export default function Home() {
                 <div className="pricing-title">Verified Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$499</div>
-                  <NextImage src="/499.webp" alt="499 package badge" width={56} height={56} className="object-contain" />
+                  <NextImage src="/499.webp" alt="499 package badge" width={112} height={112} className="object-contain" />
                 </div>
                 <div className="pricing-billed mt-2">
                   <div className="font-semibold">Billed monthly · No Setup Costs</div>
@@ -270,7 +281,7 @@ export default function Home() {
                 <div className="pricing-title">Expert Package</div>
                 <div className="mt-2 w-full flex items-center justify-between">
                   <div className="pricing-price">$299</div>
-                  <NextImage src="/299.webp" alt="299 package badge" width={56} height={56} className="object-contain" />
+                  <NextImage src="/299.webp" alt="299 package badge" width={112} height={112} className="object-contain" />
                 </div>
                 <div className="pricing-billed mt-2">
                   <div className="font-semibold">Billed monthly · No Setup Costs</div>

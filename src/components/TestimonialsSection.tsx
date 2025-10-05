@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import NextImage from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -87,11 +85,11 @@ export default function TestimonialsSection() {
 
         <div className="mt-10 testimonial-carousel">
           <article className="testimonial-card-single rounded-2xl p-6">
-            <div key={`img-${active}`} className="testimonial-image-frame relative animate-in-left">
-              <NextImage key={`image-${active}`} src={testimonials[active].img} alt={`${testimonials[active].name}`} fill className="object-cover" />
+            <div className="testimonial-image-frame relative animate-in-left">
+              <NextImage src={testimonials[active].img} alt={`${testimonials[active].name}`} fill className="object-cover" />
             </div>
 
-            <div key={`content-${active}`} className="testimonial-content mt-4 md:mt-0 animate-in-right">
+            <div className="testimonial-content mt-4 md:mt-0 animate-in-right">
               <div className="testimonial-quote-row">
                 <NextImage src="/phay.webp" alt="quote" width={28} height={28} className="shrink-0" />
                 <p className="testimonial-message text-sm leading-relaxed text-gray-700 dark:text-gray-300">{testimonials[active].text}</p>
@@ -117,24 +115,44 @@ export default function TestimonialsSection() {
             </div>
           </article>
 
-          <div className="testimonial-avatar-list mt-6">
-            {testimonials.map((t, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setActive(i)}
-                className="testimonial-avatar-button"
-                aria-current={active === i}
-              >
-                <NextImage
-                  src={t.img}
-                  alt={`Person ${i + 1}`}
-                  width={56}
-                  height={56}
-                  className={`testimonial-avatar ${active === i ? "active" : ""}`}
-                />
-              </button>
-            ))}
+          <div className="testimonial-avatar-row mt-6">
+            <button
+              type="button"
+              className="testimonial-nav prev"
+              aria-label="Previous testimonial"
+              onClick={() => setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+            >
+              ‹
+            </button>
+
+            <div className="testimonial-avatar-list">
+              {testimonials.map((t, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setActive(i)}
+                  className="testimonial-avatar-button"
+                  aria-current={active === i}
+                >
+                  <NextImage
+                    src={t.img}
+                    alt={`Person ${i + 1}`}
+                    width={56}
+                    height={56}
+                    className={`testimonial-avatar ${active === i ? "active" : ""}`}
+                  />
+                </button>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              className="testimonial-nav next"
+              aria-label="Next testimonial"
+              onClick={() => setActive((prev) => (prev + 1) % testimonials.length)}
+            >
+              ›
+            </button>
           </div>
         </div>
       </div>
