@@ -24,7 +24,7 @@ export default function Home() {
             <div className="hero-left">
               <h1 className="hero-title font-extrabold leading-tight">Got banned on Facebook? <span className="block text-accent">We bring your ads back—securely, fast, and without limits.</span></h1>
 
-              <p className="hero-sub mt-4 max-w-xl">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
+              <p className="hero-sub mt-4 max-w-xl">Reliable US IPs, aged accounts, and 24/7 expert support.</p>
 
               <div className="hero-ctas">
                 <a href="https://t.me/wolves29" className="hero-primary-cta">Get Started — Instant Setup</a>
