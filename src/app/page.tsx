@@ -21,13 +21,13 @@ export default function Home() {
 
         <div className="container mx-auto px-6 sm:px-10 py-20">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-[#0f172a] leading-tight">Banned on Facebook? <span className="block text-accent">Get Advertising Now!</span></h1>
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight hero-heading-shadow">Banned on Facebook? <span className="block text-white">Get Advertising Now!</span></h1>
 
-            <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
+            <p className="mt-6 text-lg hero-sub max-w-2xl mx-auto">We get your ads running again with trusted US IPs, aged accounts and 24/7 support—fast setup, reliable infrastructure, and guaranteed replacement.</p>
 
             <div className="mt-8 flex justify-center gap-4">
-              <a href="https://t.me/wolves29" className="btn-primary px-10 py-4 text-lg">Click Here To Get Set Up Today! 👉</a>
-              <a href="#pricing" className="btn-outline px-8 py-3">Compare Plans</a>
+              <a href="https://t.me/wolves29" className="hero-cta px-10 py-4 text-lg">Click Here To Get Set Up Today! 👉</a>
+              <a href="#pricing" className="btn-outline-hero px-8 py-3">Compare Plans</a>
             </div>
 
             <div className="mt-10 flex items-center justify-center gap-6 text-sm text-gray-600">
@@ -216,7 +216,7 @@ export default function Home() {
                 <li><span className="feature-check">✔</span><span>1 x US Profile</span></li>
                 <li><span className="feature-check">✔</span><span><strong>2 x Business Managers</strong></span></li>
                 <li><span className="feature-check">✔</span><span>Account aged 10+ Years</span></li>
-                <li><span className="feature-check"><span className="feature-highlight">✔</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
+                <li><span className="feature-check"><span className="feature-highlight">��</span></span><span className="feature-highlight">Lifetime Replacement at No Additional Cost</span></li>
                 <li><span className="feature-check">✔</span><span>Risk mitigation PDF created by 8 figure marketers</span></li>
                 <li><span className="feature-check">✔</span><span>3 x FREE Trusted FB Pages <small className="text-sm text-gray-500">(Normally Valued at $100)</small></span></li>
                 <li><span className="feature-check">✔</span><span>US Domestic Dedicated IP hosted on a Private Server</span></li>
