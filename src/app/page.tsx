@@ -52,7 +52,7 @@ export default function Home() {
         <div className="relative container mx-auto px-2 sm:px-4 flex items-center h-[500px] sm:h-[560px] justify-start">
           {/* Left: Text Card */}
           <div className="hero-content z-20 max-w-[680px] rounded-2xl p-6 sm:p-8 text-white">
-            <div className="hero-logo"><NextImage src="/logo.jpg" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /></div>
+            <div className="hero-logo"><NextImage src="/logo.png" alt="Exiscale logo" width={64} height={64} className="hero-logo-img" /></div>
             <h1 className="text-2xl sm:text-4xl font-semibold leading-tight">
               <span className="block">Banned on Facebook?</span>
               <span className="block">Get Advertising Now!</span>
@@ -362,7 +362,7 @@ export default function Home() {
       <footer className="site-footer bg-[#07201a] text-white py-6">
         <div className="max-w-[1200px] mx-auto px-2 sm:px-4 flex items-center justify-between">
           <div className="footer-left flex items-center gap-4">
-            <NextImage src="/logo.jpg" alt="logo" width={56} height={20} className="footer-logo" />
+            <NextImage src="/logo.png" alt="logo" width={56} height={20} className="footer-logo" />
           </div>
 
           <div className="footer-center text-sm opacity-80">Copyright by 2025 @ Exiscale LLC</div>
