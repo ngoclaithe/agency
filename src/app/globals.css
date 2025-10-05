@@ -573,12 +573,11 @@ a.bg-\[#ff7a2f\]:hover, a.bg-\[#ff7a2f\]:active {
 .pricing-card .pricing-card-header > .pricing-billed { align-self: flex-start; text-align: left; width: 100%; margin-left: 0; padding-left: 0; }
 
 /* Center the Choose Plan button inside card */
-.pricing-cta { display: inline-block; margin: 0 auto; }
+.pricing-cta { display: block; width: fit-content; margin: 0.75rem auto 0; padding: 0.6rem 1rem; border-radius: 999px; background: #ff7a2f; color: white; font-weight: 700; text-align: center; }
 .pricing-features li { display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.35rem 0; border-bottom: 1px dashed rgba(15,23,42,0.04); }
 .pricing-features li:last-child { border-bottom: none; }
 .feature-check { color: #10b981; font-weight: 700; }
 .feature-highlight { color: #ff7a2f; font-weight: 700; }
-.pricing-cta { margin-top: 0.75rem; display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1rem; border-radius: 999px; background: #ff7a2f; color: white; font-weight: 700; }
 
 /* High spend banner */
 .high-spend-banner { margin-top: 2rem; background: transparent; padding: 0; }
